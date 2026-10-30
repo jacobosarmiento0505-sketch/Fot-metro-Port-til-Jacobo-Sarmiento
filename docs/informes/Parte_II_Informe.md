@@ -160,6 +160,22 @@ Archivo: `electronica/kicad/fotometro.kicad_pcb`
 - El interruptor SW1 usa ahora la huella `SW_Slide-03_Wuerth-WS-SLTV_10x2.5x6.4_P2.54mm`
   (pines a 2.54 mm) porque la anterior tenía pads a 2 mm entre sí.
 
+## 6.1 Retroalimentación del profesor y cambios realizados (versión 2)
+
+Tras revisar la primera versión, el profesor pidió cuatro cambios, todos
+aplicados y aprobados en la revisión posterior:
+
+| # | Observación del profesor | Cambio realizado |
+|---|---|---|
+| 1 | Faltaban textos en el esquemático para reconocer los componentes de la placa | Títulos de bloque, descripción junto a cada componente y a cada pin de los conectores, y cuadro de título (hoja A3) |
+| 2 | Los botones debían conectarse con cables, como en su ejemplo | SW2/SW3 cableados: pull-up de 10 kΩ a 3V3, unión en la línea del GPIO, pulsador a GND y capacitor de 100 nF a GND |
+| 3 | El ESP32 (J3) estaba suelto, solo con etiquetas, lo que podía alterar el funcionamiento al implementar la placa | Todos los pines de J3 conectados con cables: alimentación con símbolos de potencia, buses SDA/SCL hacia J4, J5 y los pull-ups, y GPIO hacia los botones |
+| 4 | La placa era muy grande y se perdía espacio | Placa rediseñada de ~175 x 220 mm a ~117 x 77 mm (menos de la cuarta parte del área), con las 40 conexiones ruteadas |
+
+Verificación: el listado de conexiones (netlist) del esquemático coincide
+exactamente con el de la PCB (0 diferencias), la placa tiene 0
+cortocircuitos y 0 conexiones sin ruta.
+
 ## 7. Archivos de fabricación
 
 Generados en `electronica/outputs/`:
@@ -167,15 +183,15 @@ Generados en `electronica/outputs/`:
 - `gerbers/` — Gerbers de todas las capas + archivo de taladro (`.drl`)
 - `fotometro.step` — modelo 3D
 - `fotometro_pcb.pdf`, `.svg`, `.png` — vista de la placa
-- `fotometro_sch.pdf`, `fotometro_sch-1.png` — esquemático
+- `fotometro_sch-1.png` — esquemático (el PDF está en `electronica/kicad/fotometro_sch.pdf`)
 - `BOM_fotometro.csv` — lista de materiales
 
 ## 8. Repositorio
 
 Estructura de carpetas según lo pedido por el enunciado (`README.md`,
-`LICENSE`, `docs/`, `electronica/`, `firmware/`, `software/`). El
-repositorio se preparó localmente, listo para que el estudiante lo suba a
-un repositorio público de GitHub.
+`LICENSE`, `docs/`, `electronica/`, `firmware/`, `software/`). El proyecto
+fue subido a un repositorio público de GitHub:
+<https://github.com/jacobosarmiento0505-sketch/Fot-metro-Port-til-Jacobo-Sarmiento>
 
 ## 9. Uso de inteligencia artificial
 
@@ -190,6 +206,10 @@ Se utilizó un asistente de IA (Claude, Anthropic) para:
   decisiones de implementación (nivel de alimentación del sensor y uso del
   pin de interrupción) que fueron delegadas explícitamente al criterio del
   asistente.
+- Aplicar la retroalimentación del profesor: rehacer el esquemático con
+  cables y textos, y buscar una distribución de PCB compacta y enrutable en
+  una sola capa mediante un algoritmo de optimización (recocido simulado) y
+  un router de pistas propio.
 - Redactar la documentación del repositorio (README, bitácora, este
   informe).
 
