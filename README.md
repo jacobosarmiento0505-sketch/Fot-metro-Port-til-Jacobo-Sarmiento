@@ -93,7 +93,7 @@ En `electronica/outputs/` se incluyen:
 - `fotometro.step` — modelo 3D de la placa
 - `fotometro_pcb.pdf` / `.svg` — vistas de la placa en vectorial
 - `fotometro_pcb_cara_superior.png`, `fotometro_pcb_cara_inferior.png`,
-  `fotometro_vista3d.png`, `fotometro_drc.png` — imágenes de las vistas y del DRC
+  `fotometro_vista3d_superior.png`, `fotometro_vista3d_perspectiva.png`, `fotometro_drc.png` — imágenes de las vistas y del DRC
 - `fotometro_sch.pdf` / `fotometro_sch-1.png` — esquemático
 - `BOM_fotometro.csv` — lista de materiales
 
