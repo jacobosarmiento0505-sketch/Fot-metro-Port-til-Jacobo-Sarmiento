@@ -1,6987 +1,2066 @@
-(kicad_sch
-	(version 20260306)
-	(generator "eeschema")
-	(generator_version "10.0")
-	(uuid "62c3ffcc-90d1-4758-8c92-a8be808fa5c1")
-	(paper "A3")
-	(title_block
-		(title "Fotómetro portátil para análisis de muestras")
-		(date "2026-10-23")
-		(rev "2.0")
-		(company "Universidad del Desarrollo (UDD) - Ingeniería Civil Biomédica")
-		(comment 1 "Electrónica para Ingeniería Biomédica - Parte II")
-		(comment 2 "Autor: Jacobo Sarmiento Espinosa")
-		(comment 3 "Placa de integración: ESP32 + OLED + TCS34725 + TP4056/Boost")
-	)
-	(lib_symbols
-		(symbol "Connector_Generic:Conn_01x02"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x02"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_01x02_1_1"
-				(rectangle
-					(start -1.27 1.27)
-					(end 1.27 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Connector_Generic:Conn_01x04"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x04"
-				(at 0 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_01x04_1_1"
-				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -6.35)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Connector_Generic:Conn_01x07"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x07"
-				(at 0 -10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_01x07_1_1"
-				(rectangle
-					(start -1.27 8.89)
-					(end 1.27 -8.89)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 7.747)
-					(end 0 7.493)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 5.207)
-					(end 0 4.953)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -7.493)
-					(end 0 -7.747)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 7.62 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 5.08 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -7.62 0)
-					(length 3.81)
-					(name "Pin_7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:C"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "C"
-				(at 0.635 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Unpolarized capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "C_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "C_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "C_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:C_Polarized"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "C_Polarized"
-				(at 0.635 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Polarized capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "CP_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "C_Polarized_0_1"
-				(rectangle
-					(start -2.286 0.508)
-					(end 2.286 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 2.286) (xy -0.762 2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.794) (xy -1.27 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 2.286 -0.508)
-					(end -2.286 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "C_Polarized_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:R"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R"
-				(at 2.032 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "R"
-				(at 0 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at -1.778 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Resistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Switch:SW_Push"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "SW"
-				(at 1.27 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "SW_Push"
-				(at 0 -1.524 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Push button switch, generic, two pins"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "switch normally-open pushbutton push-button"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SW_Push_0_1"
-				(circle
-					(center -2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.27) (xy 0 3.048)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy -2.54 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Switch:SW_SPDT_COM1"
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "SW"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SW_SPDT_COM1"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Switch, single pole double throw"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "switch single-pole double-throw spdt ON-ON"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SW_SPDT_COM1_0_1"
-				(circle
-					(center -2.032 0)
-					(radius 0.4572)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.651 0.254) (xy 1.651 2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 2.54)
-					(radius 0.4572)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 -2.54)
-					(radius 0.4572)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SW_SPDT_COM1_1_1"
-				(rectangle
-					(start -3.175 3.81)
-					(end 3.175 -3.81)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 2.54 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -2.54 180)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "power:GND"
-			(power global)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "GND"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "GND_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "GND_1_1"
-				(pin power_in line
-					(at 0 0 270)
-					(length 0)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "power:PWR_FLAG"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#FLG"
-				(at 0 1.905 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "PWR_FLAG"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Special symbol for telling ERC where power comes from"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "flag power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_0"
-				(pin power_out line
-					(at 0 0 90)
-					(length 0)
-					(name "pwr"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "power:VCC_3V3"
-			(power global)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "VCC_3V3"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"VCC\""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "VCC_3V3_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "VCC_3V3_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(hide yes)
-					(name "VCC_3V3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "power:VCC_5V"
-			(power global)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "VCC_5V"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"VCC\""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "VCC_5V_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "VCC_5V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(hide yes)
-					(name "VCC_5V"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-	)
-	(rectangle
-		(start 15 88)
-		(end 335 176)
-		(stroke
-			(width 0.3)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "0f5c6d1e-eb15-47a3-9900-ccd3f4c927b3")
-	)
-	(rectangle
-		(start 15 28)
-		(end 200 80)
-		(stroke
-			(width 0.3)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "576d0eed-7207-43be-bf62-ae2819ca3743")
-	)
-	(rectangle
-		(start 205 180)
-		(end 335 252)
-		(stroke
-			(width 0.3)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "7608efed-6637-4639-80c6-f5c9057ad6f7")
-	)
-	(rectangle
-		(start 15 180)
-		(end 200 252)
-		(stroke
-			(width 0.3)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "93ab933e-421a-4efc-87b8-289739be8aca")
-	)
-	(text "Salida del módulo: VCC_5V (alimenta al ESP32)"
-		(exclude_from_sim no)
-		(at 140 68 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "015868c9-791d-4572-b288-8daf4db2f2ca")
-	)
-	(text "3  3V3 (salida regulada)"
-		(exclude_from_sim no)
-		(at 59.5 150.36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "04acda12-2c10-47f4-9b31-84517a87508d")
-	)
-	(text "(pin 1 = +, pin 2 = -)"
-		(exclude_from_sim no)
-		(at 40 58.5 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "07462ff1-664e-4a19-9d85-cb74b4ba1077")
-	)
-	(text "SW1: ON / OFF"
-		(exclude_from_sim no)
-		(at 100 60 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "08e3aa00-e28d-42dd-a2d6-dd66e3901ff9")
-	)
-	(text "J4: pantalla OLED SSD1306"
-		(exclude_from_sim no)
-		(at 145 120.5 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0ddf7d9e-d092-4c41-a26d-8cd407f9e8ac")
-	)
-	(text "4  SDA (I2C)"
-		(exclude_from_sim no)
-		(at 59.5 152.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0df87248-7d8c-46cc-91f7-405c6939143c")
-	)
-	(text "GPIO_CAL, GPIO_MED : entradas de los botones (activas en bajo)"
-		(exclude_from_sim no)
-		(at 215 52 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "10f9a663-ca2a-428d-a006-76d83776170f")
-	)
-	(text "4. DESACOPLE de alimentación"
-		(exclude_from_sim no)
-		(at 208 185 0)
-		(effects
-			(font
-				(size 2.2 2.2)
-				(bold yes)
-			)
-			(justify left)
-		)
-		(uuid "16630af2-965b-4ec6-8261-df5d6e08d071")
-	)
-	(text "C2: antirrebote 100 nF"
-		(exclude_from_sim no)
-		(at 133.7 250.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "1a5e5e0d-fcac-483f-99ef-94cff3a7182a")
-	)
-	(text "C5, C6, C7: 100 nF cerámicos, uno por módulo (J3, J4, J5)"
-		(exclude_from_sim no)
-		(at 208 236 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "27834f13-3128-4137-8156-23d671f61b26")
-	)
-	(text "pin 1 VCC  2 GND  3 SDA  4 SCL"
-		(exclude_from_sim no)
-		(at 145 123 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "30db7fb7-ddd3-409a-9318-4a693adb488d")
-	)
-	(text "LEYENDA DE REDES"
-		(exclude_from_sim no)
-		(at 215 30 0)
-		(effects
-			(font
-				(size 1.8 1.8)
-				(bold yes)
-			)
-			(justify left)
-		)
-		(uuid "354094e4-3223-4dd5-9d72-9a3c1edf2a36")
-	)
-	(text "(al pulsar: GPIO = GND)"
-		(exclude_from_sim no)
-		(at 173.1 210.5 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "49b03553-986c-40f2-8012-f7fbfcbf90fa")
-	)
-	(text "6  Botón CALIBRAR"
-		(exclude_from_sim no)
-		(at 59.5 157.98 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "5b19d3bd-7a80-42ed-9cf7-6509d3cf1ff2")
-	)
-	(text "R3: pull-up 10 k a 3V3"
-		(exclude_from_sim no)
-		(at 106.3 213.5 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "61337f21-69f8-4c3a-882b-6ba34b78e48e")
-	)
-	(text "SW2: pulsador CALIBRAR"
-		(exclude_from_sim no)
-		(at 173.1 208 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "67f4b948-ca45-4f45-bf44-8b8f5726bde9")
-	)
-	(text "Todas las conexiones están cableadas. Los nombres de red (VCC_3V3, VCC_5V, GND, SDA, SCL, ...) coinciden con los de la PCB."
-		(exclude_from_sim no)
-		(at 20 22 0)
-		(effects
-			(font
-				(size 1.5 1.5)
-			)
-			(justify left)
-		)
-		(uuid "7372766b-da92-4aa7-b949-2f7fb1a7bcc8")
-	)
-	(text "J2 pin 2/4: GND   pin 3: salida 5 V"
-		(exclude_from_sim no)
-		(at 140 65.5 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "79fc2093-e1dd-4940-9185-5f2dbddb40c6")
-	)
-	(text "2. CONTROL: ESP32 (J3) y bus I2C (OLED J4, sensor de color J5)"
-		(exclude_from_sim no)
-		(at 18 93 0)
-		(effects
-			(font
-				(size 2.2 2.2)
-				(bold yes)
-			)
-			(justify left)
-		)
-		(uuid "7c0d0ce9-c1b8-4e94-bce8-95fb98bcdd88")
-	)
-	(text "R1, R2: pull-up 4.7 k del bus I2C"
-		(exclude_from_sim no)
-		(at 125 100 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7c8c886f-7eeb-43cb-8255-f608eb5df6fc")
-	)
-	(text "J5: sensor de color TCS34725 (HW-393)"
-		(exclude_from_sim no)
-		(at 145 152 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8417a638-1aa2-4e24-8cdb-f0d875d780f8")
-	)
-	(text "2  GND"
-		(exclude_from_sim no)
-		(at 59.5 147.82 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "889a33ba-af6b-4ffc-af5c-cefee01afc1f")
-	)
-	(text "J2 pin 1: entrada batería (B+)"
-		(exclude_from_sim no)
-		(at 140 63 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9855c258-6372-4c62-b7bd-8531425bae44")
-	)
-	(text "R4: pull-up 10 k a 3V3"
-		(exclude_from_sim no)
-		(at 106.3 245.26 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9ab5b379-bb5b-4cce-a847-cec786098ef0")
-	)
-	(text "3. BOTONES: pull-up 10 k + antirrebote 100 nF"
-		(exclude_from_sim no)
-		(at 90 185 0)
-		(effects
-			(font
-				(size 2.2 2.2)
-				(bold yes)
-			)
-			(justify left)
-		)
-		(uuid "9fec99b2-ee29-4a23-b973-6cdea506dc6c")
-	)
-	(text "FOTÓMETRO PORTÁTIL - ESQUEMÁTICO ELÉCTRICO (placa de integración)"
-		(exclude_from_sim no)
-		(at 20 16 0)
-		(effects
-			(font
-				(size 3.5 3.5)
-				(bold yes)
-			)
-			(justify left)
-		)
-		(uuid "a17e7c59-f82f-4b2a-b20c-8b7c878b4cac")
-	)
-	(text "7  Botón MEDIR"
-		(exclude_from_sim no)
-		(at 59.5 160.52 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a300b027-e596-42eb-8041-831a26dbb500")
-	)
-	(text "J1: batería Li-Po 3.7 V"
-		(exclude_from_sim no)
-		(at 40 56 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a5412617-1ed5-42d6-8155-bbbb660d5441")
-	)
-	(text "VCC_5V : salida 5 V del módulo TP4056 + Boost"
-		(exclude_from_sim no)
-		(at 215 36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ac4459d3-4e7e-4e90-b088-0d483c4a032e")
-	)
-	(text "C1: antirrebote 100 nF"
-		(exclude_from_sim no)
-		(at 133.7 219 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ad7bcce2-5f60-4c07-a69f-8c6250a8d293")
-	)
-	(text "pin 3 SDA  4 SCL  6 GND  7 VCC"
-		(exclude_from_sim no)
-		(at 145 154.5 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ae77dee3-7407-4fec-989e-d3fe63ee013e")
-	)
-	(text "1. ALIMENTACIÓN: batería Li-Po -> interruptor -> módulo TP4056 + Boost 5 V"
-		(exclude_from_sim no)
-		(at 18 33 0)
-		(effects
-			(font
-				(size 2.2 2.2)
-				(bold yes)
-			)
-			(justify left)
-		)
-		(uuid "b354fc0e-0816-4cb8-b246-281dda843610")
-	)
-	(text "1  VIN 5 V"
-		(exclude_from_sim no)
-		(at 59.5 145.28 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "caa87f95-233a-4145-82e9-0156c410679f")
-	)
-	(text "5  SCL (I2C)"
-		(exclude_from_sim no)
-		(at 59.5 155.44 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "cf0d31e8-486d-46e5-97ef-5ff016fac74f")
-	)
-	(text "pines 1, 2, 5 sin conexión (NC)"
-		(exclude_from_sim no)
-		(at 145 157 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "dc4a6d6d-2435-42f6-85b1-4c53458f023a")
-	)
-	(text "BAT_RAW / VBAT_SW : batería antes / después del interruptor"
-		(exclude_from_sim no)
-		(at 215 44 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e1cf17a9-99ef-44fe-80cb-b1fae8e5f206")
-	)
-	(text "SDA, SCL : bus I2C (OLED + TCS34725)"
-		(exclude_from_sim no)
-		(at 215 48 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e49317ad-c011-4225-8ed4-feac3887c450")
-	)
-	(text "(al pulsar: GPIO = GND)"
-		(exclude_from_sim no)
-		(at 173.1 242.26 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "efc75282-34a4-4c09-bb89-10a52f6c006a")
-	)
-	(text "C3, C4: electrolíticos 100 uF (reserva de energía 3V3 / 5V)"
-		(exclude_from_sim no)
-		(at 208 233 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f17935b0-681d-4c3a-abaf-5d276ec16b7c")
-	)
-	(text "VCC_3V3 : 3.3 V regulados del ESP32"
-		(exclude_from_sim no)
-		(at 215 40 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f2b7600f-d15a-4e2b-8779-9b7a26688a64")
-	)
-	(text "SW3: pulsador MEDIR"
-		(exclude_from_sim no)
-		(at 173.1 239.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f43b0e11-7156-434c-a354-3aec92177528")
-	)
-	(junction
-		(at 139.7 238.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "013731aa-3556-4f0f-be57-7d27786abaf0")
-	)
-	(junction
-		(at 96.52 139.7)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4ffbf15d-5874-444d-8cbb-06dceb2e9bde")
-	)
-	(junction
-		(at 114.3 238.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "50d8ccb9-eb8f-419f-9cd7-7e63bf550301")
-	)
-	(junction
-		(at 228.6 207.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5cb200d4-6616-4b30-ae7f-0cc1cfbd3ecb")
-	)
-	(junction
-		(at 109.22 119.38)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "668b8363-fae6-4cad-9e44-4208fa7a1e42")
-	)
-	(junction
-		(at 139.7 207)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "669d277f-f8a4-4e88-8593-86b7cb310e69")
-	)
-	(junction
-		(at 109.22 142.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "72366bd6-8a3a-4f34-ac14-474239262ff0")
-	)
-	(junction
-		(at 96.52 116.84)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "77c717f8-da62-4165-ad89-0890c3082645")
-	)
-	(junction
-		(at 114.3 207)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7f076032-d093-4192-a9b7-ed89111fc8db")
-	)
-	(junction
-		(at 320.04 207.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ce4fc7dc-02e5-49ad-adb3-6bd59dfcdc81")
-	)
-	(junction
-		(at 228.6 214.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e6660ffe-8aaa-4bc4-9e7c-6a32eb45bb1a")
-	)
-	(no_connect
-		(at 132.08 144.78)
-		(uuid "076cb672-1cb3-4c46-bf05-64cdcc82a6d4")
-	)
-	(no_connect
-		(at 116.84 53.34)
-		(uuid "3acae6ed-bb15-4550-be9b-fe69009be597")
-	)
-	(no_connect
-		(at 132.08 137.16)
-		(uuid "60b1e6ca-eb2d-4d24-a108-7029ee0cb63a")
-	)
-	(no_connect
-		(at 132.08 134.62)
-		(uuid "ed7c205d-617d-4fc3-ab3d-b2c99fb69737")
-	)
-	(wire
-		(pts
-			(xy 114.3 207) (xy 139.7 207)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "03c72ac0-9ffe-4604-ac23-caa515c5160f")
-	)
-	(wire
-		(pts
-			(xy 132.08 114.3) (xy 127 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "08b35779-b19f-48e6-9351-c02dbd35c9f4")
-	)
-	(wire
-		(pts
-			(xy 160.02 50.8) (xy 154.94 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "09339634-bf0c-4938-ac97-c0517e7c095f")
-	)
-	(wire
-		(pts
-			(xy 109.22 119.38) (xy 132.08 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "119e5b5a-6a7d-431a-b77d-2754940a2ccd")
-	)
-	(wire
-		(pts
-			(xy 228.6 214.63) (xy 233.68 214.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d1ac15d-d03f-44e2-b4e5-293cf839e8a5")
-	)
-	(wire
-		(pts
-			(xy 132.08 111.76) (xy 127 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "20b5ba2e-18ca-4a56-a7c1-bb1de695d4fd")
-	)
-	(wire
-		(pts
-			(xy 96.52 139.7) (xy 132.08 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2804a032-7c72-4bfc-aebc-d5eb492cc1f8")
-	)
-	(wire
-		(pts
-			(xy 109.22 142.24) (xy 109.22 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "307401a6-3bb6-4405-9520-ad33941bc46f")
-	)
-	(wire
-		(pts
-			(xy 320.04 207.01) (xy 325.12 207.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "358b9ddd-6053-4369-b098-d93ebe0f7ad3")
-	)
-	(wire
-		(pts
-			(xy 76.2 238.76) (xy 114.3 238.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3ae9345d-a2dc-481d-8877-3821e41c6356")
-	)
-	(wire
-		(pts
-			(xy 68.58 147.32) (xy 73.66 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4004dca9-48cd-459e-879e-57fd1c9f423c")
-	)
-	(wire
-		(pts
-			(xy 68.58 50.8) (xy 106.68 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "516a2ee8-c13a-4bf0-af68-bd4dddb5eaa3")
-	)
-	(wire
-		(pts
-			(xy 132.08 149.86) (xy 127 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5430305e-38c8-42bf-921c-39ad30935b03")
-	)
-	(wire
-		(pts
-			(xy 68.58 144.78) (xy 73.66 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5f450999-f234-4301-ab39-df03c497b1b8")
-	)
-	(wire
-		(pts
-			(xy 68.58 152.4) (xy 96.52 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5fc2e068-2a70-4612-93d3-02222adf3217")
-	)
-	(wire
-		(pts
-			(xy 109.22 154.94) (xy 109.22 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "66b8c5cc-f57f-4db2-9c90-28eab8e1a81b")
-	)
-	(wire
-		(pts
-			(xy 68.58 154.94) (xy 109.22 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68bf1286-8da7-44a9-ae4f-168a92ba33db")
-	)
-	(wire
-		(pts
-			(xy 68.58 160.02) (xy 76.2 160.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "69853165-2398-48d6-9f0b-538e42b3c189")
-	)
-	(wire
-		(pts
-			(xy 170.18 238.76) (xy 170.18 243.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6bf949bf-066d-4ef0-a78a-10a6198aac8d")
-	)
-	(wire
-		(pts
-			(xy 116.84 48.26) (xy 160.02 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "73460966-99ec-4bab-81ee-51916dca5e66")
-	)
-	(wire
-		(pts
-			(xy 68.58 53.34) (xy 73.66 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "75d71bda-2d40-461c-92e6-c807a1801bb2")
-	)
-	(wire
-		(pts
-			(xy 139.7 238.76) (xy 160.02 238.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "79f02061-8838-4216-bc09-a9f9741184dc")
-	)
-	(wire
-		(pts
-			(xy 83.82 157.48) (xy 83.82 207)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ac7c307-a6fa-4757-8656-689f9133deb5")
-	)
-	(wire
-		(pts
-			(xy 170.18 207) (xy 170.18 212.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "84c0ebf1-5548-40c3-9fa5-4c5bfb98289e")
-	)
-	(wire
-		(pts
-			(xy 96.52 139.7) (xy 96.52 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8dac89ab-b52c-4866-b858-a63e008289a2")
-	)
-	(wire
-		(pts
-			(xy 139.7 207) (xy 160.02 207)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9608194c-9e93-423a-a31f-49886d547707")
-	)
-	(wire
-		(pts
-			(xy 68.58 157.48) (xy 83.82 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97f7b84a-44ae-4d82-9a0c-b3b11ce935cb")
-	)
-	(wire
-		(pts
-			(xy 96.52 116.84) (xy 132.08 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "989564da-372c-45a7-a255-1ee73fb87f80")
-	)
-	(wire
-		(pts
-			(xy 114.3 238.76) (xy 139.7 238.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a6dcc309-f2e9-41c2-9c19-bb06c5cc31cf")
-	)
-	(wire
-		(pts
-			(xy 132.08 147.32) (xy 127 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b02bb5f0-0a3a-45c8-b073-fb329b82b511")
-	)
-	(wire
-		(pts
-			(xy 83.82 207) (xy 114.3 207)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bb4b6c35-7028-471b-8b6a-6470e38a3d5f")
-	)
-	(wire
-		(pts
-			(xy 76.2 160.02) (xy 76.2 238.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c4c4b8f8-8aec-4487-b592-5096254894dc")
-	)
-	(wire
-		(pts
-			(xy 109.22 142.24) (xy 132.08 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c5a076e7-de4e-4911-90d9-cf2b3bd4a479")
-	)
-	(wire
-		(pts
-			(xy 160.02 55.88) (xy 154.94 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ceacfe99-835f-4ebc-8598-e08c08df7c5d")
-	)
-	(wire
-		(pts
-			(xy 96.52 152.4) (xy 96.52 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d8d1c872-3f2f-40ee-9f64-c375a7c9c669")
-	)
-	(wire
-		(pts
-			(xy 109.22 119.38) (xy 109.22 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dab4e54e-c678-4b7e-a7bd-ac2615aad703")
-	)
-	(wire
-		(pts
-			(xy 228.6 207.01) (xy 233.68 207.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dc3ec216-f568-498c-989e-bcf9bae7033c")
-	)
-	(wire
-		(pts
-			(xy 160.02 53.34) (xy 154.94 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ec2b2263-a47c-4e57-9d94-c220d02c97e6")
-	)
-	(wire
-		(pts
-			(xy 96.52 116.84) (xy 96.52 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f450aa1e-7e68-45fc-afab-119aa5c47a5d")
-	)
-	(wire
-		(pts
-			(xy 68.58 149.86) (xy 73.66 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe1c61eb-ae62-4725-b725-29e3e519908b")
-	)
-	(label "SCL"
-		(at 101.6 154.94 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "01cb8b79-4725-4363-ac92-29ae8185e63b")
-	)
-	(label "BAT_RAW"
-		(at 85 50.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "65f9c519-6e49-4248-ac4a-f5750c1b964b")
-	)
-	(label "SDA"
-		(at 86 152.4 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "71040595-350f-4743-8b73-6322a81203a7")
-	)
-	(label "VBAT_SW"
-		(at 135 48.26 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "a68440da-cd8e-44f5-8b97-2d4df3040d37")
-	)
-	(label "GPIO_CAL"
-		(at 91.82 207 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "d9f2c49f-1c1f-46d8-adf6-d1b8fe789854")
-	)
-	(label "GPIO_MED"
-		(at 84.2 238.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "f1d060cb-a1bd-407a-aec9-f43b09512861")
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 274.32 210.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "022e367e-5e30-448f-ba1c-409a9a2ac367")
-		(property "Reference" "C6"
-			(at 271.82 209.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100nF"
-			(at 271.82 212.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
-			(at 274.32 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 274.32 210.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 274.32 210.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b01dfb38-a776-41de-b1d1-7c1ac4b34e70")
-		)
-		(pin "2"
-			(uuid "14b94a29-7b09-44b0-88f7-325bd067820b")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "C6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 137.16 114.3 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "02b1d276-df89-4f92-a563-280bb241aa6c")
-		(property "Reference" "J4"
-			(at 141.5 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "OLED SSD1306 I2C"
-			(at 141.5 114.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 137.16 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 114.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 137.16 114.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "48c3d3bf-a8c6-4cda-a8ad-87fabae562d4")
-		)
-		(pin "4"
-			(uuid "e32cf85b-db57-4321-a2e0-045481936453")
-		)
-		(pin "1"
-			(uuid "334fcbef-aba5-416b-bcb4-59311213289f")
-		)
-		(pin "2"
-			(uuid "9f3f07fc-5010-4fb6-84e4-025837464c3e")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "J4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC_5V")
-		(at 154.94 53.34 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "03ce2bbc-a921-4951-9ec2-dfbfa0df9b48")
-		(property "Reference" "#PWR03"
-			(at 154.94 47.34 270)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC_5V"
-			(at 151.04 53.34 270)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 154.94 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 154.94 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 154.94 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "781afa61-b98c-4cd4-bd0b-7b84c01609e4")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 320.04 210.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "04071b68-cfea-4aa9-a414-04f829884b92")
-		(property "Reference" "C4"
-			(at 317.54 209.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100uF"
-			(at 317.54 212.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
-			(at 320.04 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 320.04 210.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 320.04 210.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9f9566e8-0043-4f40-afc7-435de90d0ac7")
-		)
-		(pin "2"
-			(uuid "a28e355c-20b2-476a-86fd-fb319f20e546")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "C4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 109.22 107.95 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "06b03c1f-54bd-40df-8b2d-bffad08fb3e5")
-		(property "Reference" "R2"
-			(at 111.4 106.7 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4.7k"
-			(at 111.4 109.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 109.22 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 109.22 107.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 109.22 107.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d9c45b7c-5e90-40b4-8ef0-42497fe1e418")
-		)
-		(pin "2"
-			(uuid "f9db1640-34f4-4236-8e02-ecd9391febf8")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 139.7 246.38 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0858f9f3-5374-4c3f-90f9-335bb72e2184")
-		(property "Reference" "#PWR18"
-			(at 139.7 240.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 139.7 250.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 139.7 246.38 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 139.7 246.38 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 139.7 246.38 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a8ea36b6-e85f-480b-9e26-690194ec2bbe")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR18")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 170.18 212.08 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "095d011c-992b-46c8-ade7-da962959e82e")
-		(property "Reference" "#PWR16"
-			(at 170.18 206.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 170.18 216.28 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 170.18 212.08 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 212.08 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 170.18 212.08 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "45dce13e-7ed3-4a87-a5e5-fe28f7d7b346")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 274.32 214.63 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0f907f98-36eb-4788-9a54-99ea0506262b")
-		(property "Reference" "#PWR25"
-			(at 274.32 208.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 274.32 218.83 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 274.32 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 274.32 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 274.32 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "44eb511d-1c4a-44b2-ba7a-dd1847f2a84d")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR25")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 325.12 207.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "28e219ec-e9ff-4a38-a734-829118df3292")
-		(property "Reference" "#FLG03"
-			(at 325.12 203.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 325.12 204.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 325.12 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 325.12 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 325.12 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3eb638b6-dbc3-4ee0-b4ad-f29e5bc31db1")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#FLG03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 154.94 55.88 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2a389c61-f75a-45d2-be82-079653a0fafc")
-		(property "Reference" "#PWR04"
-			(at 154.94 49.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 151.04 55.88 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 154.94 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 154.94 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 154.94 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "da39689d-0ce7-4e8b-bf49-9c99ab3908cd")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 96.52 107.95 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2dfe3ded-691d-412b-adab-003aa012d654")
-		(property "Reference" "R1"
-			(at 94.4 106.7 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "4.7k"
-			(at 94.4 109.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 96.52 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 96.52 107.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 96.52 107.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "8c0b0aab-fb2b-4bff-9b6e-f28f53200d76")
-		)
-		(pin "1"
-			(uuid "d8a0c1b5-5d99-44f2-af84-dd689a017370")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC_3V3")
-		(at 228.6 207.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2ef575f8-9de0-4860-ad0b-a44b024354dd")
-		(property "Reference" "#PWR20"
-			(at 228.6 201.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC_3V3"
-			(at 228.6 203.41 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 228.6 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 228.6 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 228.6 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9f5e8008-6ab6-48a4-aa93-84d365434994")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x07")
-		(at 137.16 142.24 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2f0a19d7-a141-46df-9b9d-7d96096d1c41")
-		(property "Reference" "J5"
-			(at 141.5 137.2 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TCS34725 HW-393 I2C"
-			(at 141.5 139.7 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical"
-			(at 137.16 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 142.24 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 137.16 142.24 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fb6edd02-b1b4-4f7b-aa13-e1ccbe7e2aa2")
-		)
-		(pin "5"
-			(uuid "29ff2f87-42f4-48f9-a2fc-67bc2d62562a")
-		)
-		(pin "2"
-			(uuid "091c0396-a3c5-4ad9-b04f-112d105ddc00")
-		)
-		(pin "4"
-			(uuid "9a5fbcf8-1b02-4f79-84d3-f44304689ed1")
-		)
-		(pin "3"
-			(uuid "b4c96f30-b2bd-4019-a052-d62cd8cd3ffc")
-		)
-		(pin "6"
-			(uuid "00f06e0e-1e9a-44ce-9954-9e6cd8408400")
-		)
-		(pin "7"
-			(uuid "f183cd4c-b9ee-4ad3-985d-5c8425ddad80")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "J5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 251.46 210.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "41696232-0f3d-47ac-a23a-190a995445f7")
-		(property "Reference" "C5"
-			(at 248.96 209.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100nF"
-			(at 248.96 212.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
-			(at 251.46 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 251.46 210.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 251.46 210.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8bbe7e99-9ebf-400e-8612-a836816d02cb")
-		)
-		(pin "2"
-			(uuid "3f7b9183-47a4-4005-a2bf-ba52d80ef778")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "C5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 251.46 214.63 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "48d8146a-ac5a-48e1-b61a-8d1d603aa302")
-		(property "Reference" "#PWR23"
-			(at 251.46 208.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 251.46 218.83 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 251.46 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 251.46 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 251.46 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f58a4700-eb1c-45ea-9874-ebfef55c945c")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR23")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC_3V3")
-		(at 127 111.76 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4dddf400-cdcb-423d-aaaa-2447f28304cd")
-		(property "Reference" "#PWR10"
-			(at 127 105.76 270)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC_3V3"
-			(at 123.1 111.76 270)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 127 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 127 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "37bbebad-0e39-4644-a707-574f9518f504")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC_5V")
-		(at 320.04 207.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4ed5a083-efb9-4d8e-9e94-67a7a968ccde")
-		(property "Reference" "#PWR28"
-			(at 320.04 201.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC_5V"
-			(at 320.04 203.41 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 320.04 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 320.04 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 320.04 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c5b49f6b-77de-4fe9-938f-38e7406f77e1")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR28")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 139.7 210.81 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5af1cd09-ad3d-43ca-8fc7-d1900b71d985")
-		(property "Reference" "C1"
-			(at 141.9 209.5 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100nF"
-			(at 141.9 212.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
-			(at 139.7 210.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 139.7 210.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 139.7 210.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a7d0fd1e-5fbe-401a-808d-628fbd30a467")
-		)
-		(pin "2"
-			(uuid "0ae8e66a-99cd-46cf-a3ef-3704f85d0136")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC_3V3")
-		(at 114.3 231.14 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "64797718-6b80-4941-ac1a-3e5571e2b0b9")
-		(property "Reference" "#PWR17"
-			(at 114.3 225.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC_3V3"
-			(at 114.3 227.54 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 114.3 231.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 114.3 231.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 114.3 231.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "86d1a27c-c649-466f-a8c4-743bbd9363d7")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC_3V3")
-		(at 251.46 207.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "66aed890-a6a2-4ce2-95ec-18e70dea27c5")
-		(property "Reference" "#PWR22"
-			(at 251.46 201.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC_3V3"
-			(at 251.46 203.41 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 251.46 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 251.46 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 251.46 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dd382876-6144-489d-8766-046cbe5243f8")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC_3V3")
-		(at 96.52 104.14 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6cab160e-db66-4d5f-af9a-86e1ccc87957")
-		(property "Reference" "#PWR08"
-			(at 96.52 98.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC_3V3"
-			(at 96.52 100.54 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 96.52 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 96.52 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 96.52 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ad48067e-68bd-4222-9fa3-42c6f96e298f")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 139.7 214.62 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "72496c47-ff12-4db4-bf89-0184c6bf3226")
-		(property "Reference" "#PWR15"
-			(at 139.7 208.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 139.7 218.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 139.7 214.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 139.7 214.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 139.7 214.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "92cc131c-b455-4f08-b70c-0750785251ee")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_SPDT_COM1")
-		(at 111.76 50.8 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7aa254ed-1162-43a1-80da-26be431c956c")
-		(property "Reference" "SW1"
-			(at 111.76 42 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Interruptor encendido"
-			(at 111.76 44.5 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_Slide-03_Wuerth-WS-SLTV_10x2.5x6.4_P2.54mm"
-			(at 111.76 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 111.76 50.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 111.76 50.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "43a45762-b5f4-404e-91f2-3055c9bc0a0a")
-		)
-		(pin "1"
-			(uuid "da489b24-795b-497e-ac38-62279d5c1438")
-		)
-		(pin "2"
-			(uuid "4281b2f1-2f59-40cc-bc81-45fa64378de5")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "SW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 170.18 243.84 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7fb9c423-a83d-4d4a-8656-7035db3db858")
-		(property "Reference" "#PWR19"
-			(at 170.18 237.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 170.18 248.04 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 170.18 243.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 243.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 170.18 243.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0e257154-162e-402b-a10d-7f53a231c988")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 228.6 210.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "816669b9-2592-475d-b568-30a7fe7903f1")
-		(property "Reference" "C3"
-			(at 226.1 209.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100uF"
-			(at 226.1 212.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
-			(at 228.6 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 228.6 210.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 228.6 210.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c8edc170-6eed-4a75-8154-21545ba907ae")
-		)
-		(pin "2"
-			(uuid "fbd230cc-b41b-4000-b751-5aa44497d549")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 114.3 203.19 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "86463d63-4cb1-4cc1-aa15-e39cba3b9c3e")
-		(property "Reference" "R3"
-			(at 112.1 201.9 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 112.1 204.4 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 114.3 203.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 114.3 203.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 114.3 203.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "dc053fba-da1d-4a4c-a577-41857fc72246")
-		)
-		(pin "1"
-			(uuid "b75a6176-e8a3-40a4-9e90-2480263c937c")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "R3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 139.7 242.57 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8c1203b1-ce59-4065-8ca5-428edf647793")
-		(property "Reference" "C2"
-			(at 141.9 241.26 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100nF"
-			(at 141.9 243.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
-			(at 139.7 242.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 139.7 242.57 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 139.7 242.57 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "efaeb82e-bd96-473a-a80f-1b4c9f512368")
-		)
-		(pin "1"
-			(uuid "e38d06c9-8a13-4930-b999-8ff711b8eb13")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 154.94 50.8 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8cbfb5ac-33aa-4bb9-910c-6652e37b6235")
-		(property "Reference" "#PWR02"
-			(at 154.94 44.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 151.04 50.8 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 154.94 50.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 154.94 50.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 154.94 50.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6a6b433b-4f64-4c90-b17e-1940764e2290")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC_3V3")
-		(at 274.32 207.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9223528c-2448-48a8-9772-da5111dd6d82")
-		(property "Reference" "#PWR24"
-			(at 274.32 201.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC_3V3"
-			(at 274.32 203.41 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 274.32 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 274.32 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 274.32 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6cab4e55-6d69-4909-99fa-c923e5ec6cfd")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR24")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x02")
-		(at 63.5 50.8 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "92c16f5d-f8c4-43e6-bc62-4500ea22490b")
-		(property "Reference" "J1"
-			(at 63.5 44 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Batería Li-Po"
-			(at 63.5 46.5 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 63.5 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 63.5 50.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 63.5 50.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3cb4368f-5782-4763-ae8e-5d2c4c3c8153")
-		)
-		(pin "2"
-			(uuid "79ac1297-acec-4ff4-bc13-0b7bbb8f5140")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 233.68 207.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "93507fce-89cd-4e5e-8c8d-18ba4988ac06")
-		(property "Reference" "#FLG01"
-			(at 233.68 203.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 233.68 204.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 233.68 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 233.68 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 233.68 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "bb71c925-3482-42dc-b4f7-65a302272185")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#FLG01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 233.68 214.63 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "95132b97-c648-4870-9c17-0f5056338a6c")
-		(property "Reference" "#FLG02"
-			(at 233.68 210.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 233.68 212.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 233.68 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 233.68 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 233.68 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4c8a22db-ef3b-4110-97ea-0daceaa37f3d")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#FLG02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 297.18 214.63 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a084f2d3-3da1-47bf-b930-935bd5f4b1ec")
-		(property "Reference" "#PWR27"
-			(at 297.18 208.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 297.18 218.83 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 297.18 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 297.18 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 297.18 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fb45c466-9dbb-4ef6-aba7-8630d8f6e4fb")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR27")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC_5V")
-		(at 73.66 144.78 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b5602ebe-22ee-4adf-8581-6f60df9b4229")
-		(property "Reference" "#PWR05"
-			(at 73.66 138.78 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC_5V"
-			(at 77.56 144.78 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 73.66 144.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 73.66 144.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 73.66 144.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0eac901e-02da-4deb-9e75-3cecd0dd0313")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR05")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC_3V3")
-		(at 114.3 199.38 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "bb6834c1-435e-4178-aef1-ea1ccc2b2b67")
-		(property "Reference" "#PWR14"
-			(at 114.3 193.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC_3V3"
-			(at 114.3 195.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 114.3 199.38 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 114.3 199.38 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 114.3 199.38 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7b68625a-8d0a-4b06-8648-42288d7cf8b8")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 165.1 50.8 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "be9949fd-6703-4aa7-88bf-bcfad6066961")
-		(property "Reference" "J2"
-			(at 172 44 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Carga+Regulador TP4056+Boost5V"
-			(at 172 46.5 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 165.1 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 50.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 165.1 50.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4da00a74-ccea-4ffe-87ee-43b5a636cbeb")
-		)
-		(pin "3"
-			(uuid "e9a1bb2f-f31c-4cc1-97cc-a2cee6055b70")
-		)
-		(pin "4"
-			(uuid "02dd5260-4e4a-403f-b084-bb71abde7097")
-		)
-		(pin "2"
-			(uuid "a395dd9e-ad29-417c-88a3-e5c53478ba38")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 228.6 214.63 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c90eda0b-6f13-4c99-b383-9b2c5fa2b24d")
-		(property "Reference" "#PWR21"
-			(at 228.6 208.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 228.6 218.83 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 228.6 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 228.6 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 228.6 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ab15753c-bf34-4afc-8078-d3c9512fbd60")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR21")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 114.3 234.95 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ca6c9cf7-5201-4489-808b-d81d22ae56d9")
-		(property "Reference" "R4"
-			(at 112.1 233.66 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 112.1 236.16 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 114.3 234.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 114.3 234.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 114.3 234.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "b3262a65-d07c-4cca-9ee9-a79ef3cfd732")
-		)
-		(pin "1"
-			(uuid "3e3b6c21-0f47-4cdb-a675-7f005aed94ea")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC_3V3")
-		(at 109.22 104.14 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d0ec5f91-66e5-4515-bf94-6ef79ca0c306")
-		(property "Reference" "#PWR09"
-			(at 109.22 98.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC_3V3"
-			(at 109.22 100.54 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 109.22 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 109.22 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 109.22 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3f02023b-4d35-49a0-9d57-2743ee678051")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 127 114.3 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d6746440-ad04-49b9-824d-c3271da9daf3")
-		(property "Reference" "#PWR11"
-			(at 127 108.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 123.1 114.3 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 127 114.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127 114.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 127 114.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1fcc9be1-8427-491b-820b-9a62a7b67c40")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x07")
-		(at 63.5 152.4 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d744621a-4a31-479b-aa71-07d9702ea741")
-		(property "Reference" "J3"
-			(at 63.5 138.5 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "ESP32 (dev board)"
-			(at 63.5 136 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical"
-			(at 63.5 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 63.5 152.4 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 63.5 152.4 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "6"
-			(uuid "079a4d77-7b93-456b-a046-73b90ae2816f")
-		)
-		(pin "3"
-			(uuid "6183a544-1f32-4256-8554-8d37417b11c5")
-		)
-		(pin "2"
-			(uuid "b6949652-7a2a-42f9-a1bb-40ee6d062318")
-		)
-		(pin "4"
-			(uuid "1f90225a-7fcf-47dd-a42b-8570fb644b2a")
-		)
-		(pin "1"
-			(uuid "775a89e3-d726-4f60-ba3c-1e0b82875343")
-		)
-		(pin "5"
-			(uuid "77a6a09b-1aac-445a-8426-f722521bf03e")
-		)
-		(pin "7"
-			(uuid "11edfc53-2564-4580-bd27-6f1e98cf1936")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC_3V3")
-		(at 127 149.86 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d7ccae78-598a-443d-a906-508d6404c4fb")
-		(property "Reference" "#PWR13"
-			(at 127 143.86 270)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC_3V3"
-			(at 123.1 149.86 270)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 127 149.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127 149.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 127 149.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2cacae30-590b-4334-a7ed-416409766f05")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 165.1 207 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "da105563-983e-4151-ba76-cee3f3c2187d")
-		(property "Reference" "SW2"
-			(at 165.1 201.5 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "CALIBRAR"
-			(at 165.1 204 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 165.1 207 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 207 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 165.1 207 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6a2afa68-cdc3-490f-8bf5-15e823d5642e")
-		)
-		(pin "2"
-			(uuid "00147a72-8372-49ad-88eb-61c94e13857f")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "SW2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 165.1 238.76 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "dc6c5355-7a37-439a-a5e2-efab7c7e5392")
-		(property "Reference" "SW3"
-			(at 165.1 233.26 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MEDIR"
-			(at 165.1 235.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 165.1 238.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 238.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 165.1 238.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "704c897e-04af-4b46-bbce-1cab0db8093b")
-		)
-		(pin "1"
-			(uuid "17acecda-7e4a-4636-982f-2bb65014006b")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "SW3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC_3V3")
-		(at 297.18 207.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "dfde536e-52ff-4115-aca3-7d53d1a4a96c")
-		(property "Reference" "#PWR26"
-			(at 297.18 201.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC_3V3"
-			(at 297.18 203.41 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 297.18 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 297.18 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 297.18 207.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4b62c1d7-2826-47ed-a925-81267024b152")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR26")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC_3V3")
-		(at 73.66 149.86 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e01f7ef1-076e-4956-a328-f4c92d40ac6e")
-		(property "Reference" "#PWR07"
-			(at 73.66 143.86 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC_3V3"
-			(at 77.56 149.86 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 73.66 149.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 73.66 149.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 73.66 149.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "bc290238-d546-490d-802f-f7182cf4d386")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 297.18 210.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "eca07449-27da-41a7-bf89-3d3e1c48ccb4")
-		(property "Reference" "C7"
-			(at 294.68 209.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100nF"
-			(at 294.68 212.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
-			(at 297.18 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 297.18 210.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 297.18 210.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "4edff5a5-bb8b-499c-a7eb-c975133a40dd")
-		)
-		(pin "1"
-			(uuid "93b184c9-fa6d-4b7b-91ea-478b5490a832")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "C7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 73.66 53.34 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f0211388-5f37-4bc2-8496-39759686e37b")
-		(property "Reference" "#PWR01"
-			(at 73.66 47.34 270)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 77.56 53.34 270)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 73.66 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 73.66 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 73.66 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3b5609ee-e364-4f25-bf8f-e9837f20d32b")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 127 147.32 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f3bee606-d0aa-4792-a4fc-09c51584cd08")
-		(property "Reference" "#PWR12"
-			(at 127 141.32 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 123.1 147.32 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 127 147.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127 147.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 127 147.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "48c3aabd-f608-4afa-887e-f9cbe856c55d")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 320.04 214.63 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "faab17dd-2724-47e4-b8d0-535dda6749f4")
-		(property "Reference" "#PWR29"
-			(at 320.04 208.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 320.04 218.83 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 320.04 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 320.04 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 320.04 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cb41c4aa-0eac-449f-babf-4b48f8d649a4")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR29")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 73.66 147.32 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "fac9a245-8f7f-44a1-81e9-b59b85c60d27")
-		(property "Reference" "#PWR06"
-			(at 73.66 141.32 270)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 77.56 147.32 270)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 73.66 147.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 73.66 147.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 73.66 147.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8344d737-7cef-43f8-9502-cd29dae651fa")
-		)
-		(instances
-			(project "fotometro"
-				(path "/62c3ffcc-90d1-4758-8c92-a8be808fa5c1"
-					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(sheet_instances
-		(path "/"
-			(page "1")
-		)
-	)
-	(embedded_fonts no)
+(kicad_sch (version 20230121) (generator kiutils)
+
+  (uuid 297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3)
+
+  (paper "A3")
+
+  (title_block
+    (title "Fotómetro portátil para análisis de muestras")
+    (date "2026-10-30")
+    (rev "2.0")
+    (company "Universidad del Desarrollo (UDD) - Ingeniería Civil Biomédica")
+    (comment 1 "Electrónica para Ingeniería Biomédica - Parte II")
+    (comment 2 "Equipo 2: J. Sarmiento, S. Kotoras, J. Otero (Secc. 1)")
+    (comment 3 "Placa de integración: ESP32 + OLED + TCS34725 + TP4056/Boost")
+  )
+
+  (lib_symbols
+    (symbol "Connector_Generic:Conn_01x02" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "J" (at 0 2.54 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "Conn_01x02" (at 0 -5.08 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "connector" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "Connector*:*_1x??_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "Conn_01x02_1_1"
+        (rectangle (start -1.27 -2.413) (end 0 -2.667)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 0.127) (end 0 -0.127)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 1.27) (end 1.27 -3.81)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+        (pin passive line (at -5.08 0 0) (length 3.81)
+          (name "Pin_1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 -2.54 0) (length 3.81)
+          (name "Pin_2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+
+    (symbol "Switch:SW_SPDT_COM1" (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "SW" (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "SW_SPDT_COM1" (at 0 -5.08 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 -7.62 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "switch single-pole double-throw spdt ON-ON" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Switch, single pole double throw" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "SW_SPDT_COM1_0_1"
+        (circle (center -2.032 0) (radius 0.4572)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -1.651 0.254)
+            (xy 1.651 2.286)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center 2.032 -2.54) (radius 0.4572)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center 2.032 2.54) (radius 0.4572)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "SW_SPDT_COM1_1_1"
+        (rectangle (start -3.175 3.81) (end 3.175 -3.81)
+          (stroke (width 0) (type default))
+          (fill (type background))
+        )
+        (pin passive line (at 5.08 2.54 180) (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 0 0) (length 2.54)
+          (name "B" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 5.08 -2.54 180) (length 2.54)
+          (name "C" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+
+    (symbol "Connector_Generic:Conn_01x04" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "J" (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "Conn_01x04" (at 0 -7.62 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "connector" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "Connector*:*_1x??_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "Conn_01x04_1_1"
+        (rectangle (start -1.27 -4.953) (end 0 -5.207)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 -2.413) (end 0 -2.667)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 0.127) (end 0 -0.127)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 2.667) (end 0 2.413)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 3.81) (end 1.27 -6.35)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+        (pin passive line (at -5.08 2.54 0) (length 3.81)
+          (name "Pin_1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 0 0) (length 3.81)
+          (name "Pin_2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 -2.54 0) (length 3.81)
+          (name "Pin_3" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 -5.08 0) (length 3.81)
+          (name "Pin_4" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+
+    (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "GND" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "GND_1_1"
+        (pin power_in line (at 0 0 270) (length 0) hide
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+
+    (symbol "power:VCC_5V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "VCC_5V" (at 0 3.81 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\"" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "VCC_5V_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "VCC_5V_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "VCC_5V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+
+    (symbol "Connector_Generic:Conn_01x07" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "J" (at 0 10.16 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "Conn_01x07" (at 0 -10.16 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "connector" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "Connector*:*_1x??_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "Conn_01x07_1_1"
+        (rectangle (start -1.27 -7.493) (end 0 -7.747)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 -4.953) (end 0 -5.207)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 -2.413) (end 0 -2.667)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 0.127) (end 0 -0.127)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 2.667) (end 0 2.413)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 5.207) (end 0 4.953)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 7.747) (end 0 7.493)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 8.89) (end 1.27 -8.89)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+        (pin passive line (at -5.08 7.62 0) (length 3.81)
+          (name "Pin_1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 5.08 0) (length 3.81)
+          (name "Pin_2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 2.54 0) (length 3.81)
+          (name "Pin_3" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 0 0) (length 3.81)
+          (name "Pin_4" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 -2.54 0) (length 3.81)
+          (name "Pin_5" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 -5.08 0) (length 3.81)
+          (name "Pin_6" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 -7.62 0) (length 3.81)
+          (name "Pin_7" (effects (font (size 1.27 1.27))))
+          (number "7" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+
+    (symbol "Device:R" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "R" (at 2.032 0 90)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "R" (at 0 0 90)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "R res resistor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Resistor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "R_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "R_0_1"
+        (rectangle (start -1.016 -2.54) (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "R_1_1"
+        (pin passive line (at 0 3.81 270) (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 0 -3.81 90) (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+
+    (symbol "power:VCC_3V3" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "VCC_3V3" (at 0 3.81 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\"" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "VCC_3V3_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "VCC_3V3_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "VCC_3V3" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+
+    (symbol "Device:C" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
+      (property "Reference" "C" (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Value" "C" (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Footprint" "" (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "cap capacitor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Unpolarized capacitor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "C_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "C_0_1"
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy 2.032 -0.762)
+          )
+          (stroke (width 0.508) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -2.032 0.762)
+            (xy 2.032 0.762)
+          )
+          (stroke (width 0.508) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "C_1_1"
+        (pin passive line (at 0 3.81 270) (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 0 -3.81 90) (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+
+    (symbol "Switch:SW_Push" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "SW" (at 1.27 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Value" "SW_Push" (at 0 -1.524 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "switch normally-open pushbutton push-button" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Push button switch, generic, two pins" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "SW_Push_0_1"
+        (circle (center -2.032 0) (radius 0.508)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 1.27)
+            (xy 0 3.048)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 2.54 1.27)
+            (xy -2.54 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center 2.032 0) (radius 0.508)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (pin passive line (at -5.08 0 0) (length 2.54)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 5.08 0 180) (length 2.54)
+          (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+
+    (symbol "Device:C_Polarized" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
+      (property "Reference" "C" (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Value" "C_Polarized" (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Footprint" "" (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "cap capacitor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Polarized capacitor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "CP_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "C_Polarized_0_1"
+        (rectangle (start -2.286 0.508) (end 2.286 1.016)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -1.778 2.286)
+            (xy -0.762 2.286)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -1.27 2.794)
+            (xy -1.27 1.778)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (rectangle (start 2.286 -0.508) (end -2.286 -1.016)
+          (stroke (width 0) (type default))
+          (fill (type outline))
+        )
+      )
+      (symbol "C_Polarized_1_1"
+        (pin passive line (at 0 3.81 270) (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 0 -3.81 90) (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+
+    (symbol "power:PWR_FLAG" (power) (pin_numbers hide) (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "#FLG" (at 0 1.905 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "PWR_FLAG" (at 0 3.81 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "flag power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Special symbol for telling ERC where power comes from" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "PWR_FLAG_0_0"
+        (pin power_out line (at 0 0 90) (length 0)
+          (name "pwr" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+      (symbol "PWR_FLAG_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 1.27)
+            (xy -1.016 1.905)
+            (xy 0 2.54)
+            (xy 1.016 1.905)
+            (xy 0 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+    )
+  )
+
+  (junction (at 96.52 116.84) (diameter 0) (color 0 0 0 0)
+    (uuid e988de6e-3025-467d-8ae0-16dbf3abebfc)
+  )
+  (junction (at 109.22 119.38) (diameter 0) (color 0 0 0 0)
+    (uuid 6da8f9bc-2560-45b9-8df5-7fff7d4ffad0)
+  )
+  (junction (at 96.52 139.7) (diameter 0) (color 0 0 0 0)
+    (uuid e7360925-8bf5-4a47-a626-4cd458782374)
+  )
+  (junction (at 109.22 142.24) (diameter 0) (color 0 0 0 0)
+    (uuid 97b63185-e821-4518-8325-9e0ef43e7691)
+  )
+  (junction (at 114.3 207.0) (diameter 0) (color 0 0 0 0)
+    (uuid 27d8e9a1-0ad3-4fdc-8f07-9bdf201e012a)
+  )
+  (junction (at 139.7 207.0) (diameter 0) (color 0 0 0 0)
+    (uuid 06720013-e8d2-4d81-95c8-e28f8e61dd2a)
+  )
+  (junction (at 114.3 238.76) (diameter 0) (color 0 0 0 0)
+    (uuid 0f458536-fcce-4e5f-bccb-e56d9dd640c7)
+  )
+  (junction (at 139.7 238.76) (diameter 0) (color 0 0 0 0)
+    (uuid ce1d5c7c-be4f-41ff-a2cc-e3b924a6cb99)
+  )
+  (junction (at 228.6 207.01) (diameter 0) (color 0 0 0 0)
+    (uuid c9d85e70-0312-40e9-ac48-6f83c47910fd)
+  )
+  (junction (at 228.6 214.63) (diameter 0) (color 0 0 0 0)
+    (uuid 3d648a7d-db23-4faa-a57c-3c72ab3c0e69)
+  )
+  (junction (at 320.04 207.01) (diameter 0) (color 0 0 0 0)
+    (uuid 50e8abc0-bb2e-4599-b772-3784b0aa86c4)
+  )
+
+  (no_connect (at 116.84 53.34) (uuid eaa50cee-8ff8-4e7c-a281-64ad6571181e))
+  (no_connect (at 132.08 134.62) (uuid e0a7530d-afdb-4323-a496-fca6d7d8d005))
+  (no_connect (at 132.08 137.16) (uuid c080d5cb-8cab-49bf-a0b1-5afbc24b7a0c))
+  (no_connect (at 132.08 144.78) (uuid ce02ab48-d38e-48a3-b961-7d457afbd191))
+
+  (wire (pts (xy 68.58 50.8) (xy 106.68 50.8))
+    (stroke (width 0) (type default))
+    (uuid bc24e152-1c3a-47e8-885f-67d8acd03eea)
+  )
+  (wire (pts (xy 116.84 48.26) (xy 160.02 48.26))
+    (stroke (width 0) (type default))
+    (uuid dce66cb1-c0b0-404c-b8fb-7c3108be521d)
+  )
+  (wire (pts (xy 68.58 53.34) (xy 73.66 53.34))
+    (stroke (width 0) (type default))
+    (uuid 68a80fce-74b5-41cf-ac9b-1848a0ad3db4)
+  )
+  (wire (pts (xy 160.02 50.8) (xy 154.94 50.8))
+    (stroke (width 0) (type default))
+    (uuid 051ef1ca-4354-45df-aec9-c63b74094140)
+  )
+  (wire (pts (xy 160.02 53.34) (xy 154.94 53.34))
+    (stroke (width 0) (type default))
+    (uuid 21b0cd3a-12e2-4d58-91b5-b6a852175622)
+  )
+  (wire (pts (xy 160.02 55.88) (xy 154.94 55.88))
+    (stroke (width 0) (type default))
+    (uuid e2faa478-5251-4c65-925d-2051ba8cebed)
+  )
+  (wire (pts (xy 68.58 144.78) (xy 73.66 144.78))
+    (stroke (width 0) (type default))
+    (uuid 21fb4896-ee72-4a45-8fdb-2b046edafb73)
+  )
+  (wire (pts (xy 68.58 147.32) (xy 73.66 147.32))
+    (stroke (width 0) (type default))
+    (uuid 3989f93b-7713-44bd-b0f3-ed1f433b55fe)
+  )
+  (wire (pts (xy 68.58 149.86) (xy 73.66 149.86))
+    (stroke (width 0) (type default))
+    (uuid ec6d3992-b475-4a1a-ad42-a6b37948e3c7)
+  )
+  (wire (pts (xy 68.58 152.4) (xy 96.52 152.4))
+    (stroke (width 0) (type default))
+    (uuid 3193f66b-304b-41f2-8aed-f4ac399e70bb)
+  )
+  (wire (pts (xy 96.52 152.4) (xy 96.52 139.7))
+    (stroke (width 0) (type default))
+    (uuid b68563c9-b697-4ea1-9ed7-43e03a727f4b)
+  )
+  (wire (pts (xy 96.52 139.7) (xy 96.52 116.84))
+    (stroke (width 0) (type default))
+    (uuid 91a614ca-b07f-4c4b-b57e-1f48b1bd2b78)
+  )
+  (wire (pts (xy 96.52 116.84) (xy 96.52 111.76))
+    (stroke (width 0) (type default))
+    (uuid eb892248-895e-45b3-96e8-4c6ede46032b)
+  )
+  (wire (pts (xy 68.58 154.94) (xy 109.22 154.94))
+    (stroke (width 0) (type default))
+    (uuid ed49e4e0-a4f4-4244-9617-7c3e278ad3bd)
+  )
+  (wire (pts (xy 109.22 154.94) (xy 109.22 142.24))
+    (stroke (width 0) (type default))
+    (uuid 95b772c9-dbde-475f-8ca5-2e4304b2b521)
+  )
+  (wire (pts (xy 109.22 142.24) (xy 109.22 119.38))
+    (stroke (width 0) (type default))
+    (uuid 00222c9e-288f-431a-ad29-1902dc5a7943)
+  )
+  (wire (pts (xy 109.22 119.38) (xy 109.22 111.76))
+    (stroke (width 0) (type default))
+    (uuid 8948baac-dfc4-4e3b-bd94-829dc4d39237)
+  )
+  (wire (pts (xy 96.52 116.84) (xy 132.08 116.84))
+    (stroke (width 0) (type default))
+    (uuid 433d1b97-f0d4-42f8-aaf9-8878aea44cf2)
+  )
+  (wire (pts (xy 109.22 119.38) (xy 132.08 119.38))
+    (stroke (width 0) (type default))
+    (uuid 7b86d0b0-93f3-4496-9f52-ebdec415bb68)
+  )
+  (wire (pts (xy 96.52 139.7) (xy 132.08 139.7))
+    (stroke (width 0) (type default))
+    (uuid 9aff0f16-bff5-49f4-a997-45d06ba33d14)
+  )
+  (wire (pts (xy 109.22 142.24) (xy 132.08 142.24))
+    (stroke (width 0) (type default))
+    (uuid bbf77881-a84c-446f-b418-cd065a9c1b9e)
+  )
+  (wire (pts (xy 132.08 111.76) (xy 127.0 111.76))
+    (stroke (width 0) (type default))
+    (uuid 1538b6d9-44e8-4522-a2f7-a6eeb305bdcc)
+  )
+  (wire (pts (xy 132.08 114.3) (xy 127.0 114.3))
+    (stroke (width 0) (type default))
+    (uuid 5fbbc7fc-f857-4ab2-aa86-21e369fdbdc4)
+  )
+  (wire (pts (xy 132.08 147.32) (xy 127.0 147.32))
+    (stroke (width 0) (type default))
+    (uuid 4b41dad9-747d-4761-815a-c836ff4eac9b)
+  )
+  (wire (pts (xy 132.08 149.86) (xy 127.0 149.86))
+    (stroke (width 0) (type default))
+    (uuid 0d3429d9-535c-4de9-9879-9d9cd1529fc4)
+  )
+  (wire (pts (xy 68.58 157.48) (xy 83.82 157.48))
+    (stroke (width 0) (type default))
+    (uuid 4c5e410f-319a-4801-b099-8dd628eea948)
+  )
+  (wire (pts (xy 83.82 157.48) (xy 83.82 207.0))
+    (stroke (width 0) (type default))
+    (uuid f6e750cd-899f-4517-aa20-feb7814c1888)
+  )
+  (wire (pts (xy 83.82 207.0) (xy 114.3 207.0))
+    (stroke (width 0) (type default))
+    (uuid d86ec4ba-0d80-4986-8d60-0f7fae3f6a8f)
+  )
+  (wire (pts (xy 114.3 207.0) (xy 139.7 207.0))
+    (stroke (width 0) (type default))
+    (uuid 33503634-5beb-4e20-9b58-fb176b945292)
+  )
+  (wire (pts (xy 139.7 207.0) (xy 160.02 207.0))
+    (stroke (width 0) (type default))
+    (uuid 3a59ad58-3a5a-4c3d-8367-643cf69c1dd6)
+  )
+  (wire (pts (xy 170.18 207.0) (xy 170.18 212.08))
+    (stroke (width 0) (type default))
+    (uuid 10eebcbc-8b51-4af4-a31f-346c96918763)
+  )
+  (wire (pts (xy 68.58 160.02) (xy 76.2 160.02))
+    (stroke (width 0) (type default))
+    (uuid 20c9b445-ad93-48a1-8ffb-b9bd7b2f6a08)
+  )
+  (wire (pts (xy 76.2 160.02) (xy 76.2 238.76))
+    (stroke (width 0) (type default))
+    (uuid fb85a273-7201-48a8-8929-df8e73b0db7a)
+  )
+  (wire (pts (xy 76.2 238.76) (xy 114.3 238.76))
+    (stroke (width 0) (type default))
+    (uuid 492ef5af-bc0f-4bf5-a955-97840a6e9234)
+  )
+  (wire (pts (xy 114.3 238.76) (xy 139.7 238.76))
+    (stroke (width 0) (type default))
+    (uuid 1f763508-3aab-49b4-a0b9-dee82ba39ad0)
+  )
+  (wire (pts (xy 139.7 238.76) (xy 160.02 238.76))
+    (stroke (width 0) (type default))
+    (uuid 012bdc47-0352-466f-b72c-1811dffb08cf)
+  )
+  (wire (pts (xy 170.18 238.76) (xy 170.18 243.84))
+    (stroke (width 0) (type default))
+    (uuid 3b6909f1-c448-45c3-9d6d-cc079ec1fd78)
+  )
+  (wire (pts (xy 228.6 207.01) (xy 233.68 207.01))
+    (stroke (width 0) (type default))
+    (uuid e19973ef-6d0a-4259-9366-9ba0504e2e2a)
+  )
+  (wire (pts (xy 228.6 214.63) (xy 233.68 214.63))
+    (stroke (width 0) (type default))
+    (uuid 1a3d7245-3546-44cf-9641-a042e978a4e5)
+  )
+  (wire (pts (xy 320.04 207.01) (xy 325.12 207.01))
+    (stroke (width 0) (type default))
+    (uuid f699a0f9-4d81-4efa-b033-5f5dabe58efd)
+  )
+
+  (rectangle (start 15 28) (end 200 80)
+    (stroke (width 0.3) (type dash))
+    (fill (type none))
+    (uuid fbcff55c-ae4b-47ad-9e01-a94bfcb51dfa)
+  )
+  (rectangle (start 15 88) (end 335 176)
+    (stroke (width 0.3) (type dash))
+    (fill (type none))
+    (uuid 30a69c23-e268-4b6f-9682-c2d2f0fde38a)
+  )
+  (rectangle (start 15 180) (end 200 252)
+    (stroke (width 0.3) (type dash))
+    (fill (type none))
+    (uuid a4824f1f-7304-4ace-93d5-1ef5d0d4ae4e)
+  )
+  (rectangle (start 205 180) (end 335 252)
+    (stroke (width 0.3) (type dash))
+    (fill (type none))
+    (uuid 4d018078-ae7f-49aa-b639-5dc72e2778fc)
+  )
+
+  (text "FOTÓMETRO PORTÁTIL - ESQUEMÁTICO ELÉCTRICO (placa de integración)"
+    (at 20.0 16.0 0)
+    (effects (font (size 3.5 3.5) bold) (justify left))
+    (uuid 43dbbb77-31a6-4bda-a9dd-234f9f57e4b2)
+  )
+  (text "Todas las conexiones están cableadas. Los nombres de red (VCC_3V3, VCC_5V, GND, SDA, SCL, ...) coinciden con los de la PCB."
+    (at 20.0 22.0 0)
+    (effects (font (size 1.5 1.5)) (justify left))
+    (uuid 5083398f-7bce-4245-8343-1a72a781b77d)
+  )
+  (text "1. ALIMENTACIÓN: batería Li-Po -> interruptor -> módulo TP4056 + Boost 5 V"
+    (at 18.0 33.0 0)
+    (effects (font (size 2.2 2.2) bold) (justify left))
+    (uuid 38ef0933-1abe-4996-9def-96045657f69e)
+  )
+  (text "J1: batería Li-Po 3.7 V" (at 40.0 56.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid f145cfce-90c8-4744-805f-7a49938ea898)
+  )
+  (text "(pin 1 = +, pin 2 = -)" (at 40.0 58.5 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 884f2245-b921-4f23-b718-dcd2afc9d5c8)
+  )
+  (text "SW1: ON / OFF" (at 100.0 60.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 47dfe119-3626-4868-bf54-bc1e371f0cc7)
+  )
+  (text "J2 pin 1: entrada batería (B+)" (at 140.0 63.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 1a576ec6-87e3-4dc7-bcbd-f9f5e7f12bb1)
+  )
+  (text "J2 pin 2/4: GND   pin 3: salida 5 V" (at 140.0 65.5 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 4e8a0a41-9292-44de-844d-ad284046f677)
+  )
+  (text "Salida del módulo: VCC_5V (alimenta al ESP32)" (at 140.0 68.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 791f9f3f-8c58-44ad-913d-699f8fec625d)
+  )
+  (text "2. CONTROL: ESP32 (J3) y bus I2C (OLED J4, sensor de color J5)"
+    (at 18.0 93.0 0)
+    (effects (font (size 2.2 2.2) bold) (justify left))
+    (uuid 962571de-cfe7-4ee0-994c-c4fc131b218e)
+  )
+  (text "1  VIN 5 V" (at 59.5 145.28 0)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid fd0a1942-90ca-4de9-8d71-67222ad95706)
+  )
+  (text "2  GND" (at 59.5 147.82 0)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 927d4a93-4721-4a7a-9fed-b7d43802cc38)
+  )
+  (text "3  3V3 (salida regulada)" (at 59.5 150.36 0)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid c3fa48bc-5878-43b7-903e-38b01fe13867)
+  )
+  (text "4  SDA (I2C)" (at 59.5 152.9 0)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 1d989f9b-4d00-4db4-a24f-12f8397b4791)
+  )
+  (text "5  SCL (I2C)" (at 59.5 155.44 0)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid ca6d7026-7788-4944-b085-452f53a6b011)
+  )
+  (text "6  Botón CALIBRAR" (at 59.5 157.98 0)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 433c7011-d68e-49d6-b19f-3997919c2f63)
+  )
+  (text "7  Botón MEDIR" (at 59.5 160.52 0)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 9051e03f-641d-47b6-9824-eaedd2d7cfe2)
+  )
+  (text "J4: pantalla OLED SSD1306" (at 145.0 120.5 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 2fd41550-3d6d-45ad-8f09-e1b89935137f)
+  )
+  (text "pin 1 VCC  2 GND  3 SDA  4 SCL" (at 145.0 123.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 7247614f-a829-40b6-a238-88b691c65183)
+  )
+  (text "J5: sensor de color TCS34725 (HW-393)" (at 145.0 152.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 7ffe8a07-d048-4ef5-8161-9b31e3e3e44d)
+  )
+  (text "pin 3 SDA  4 SCL  6 GND  7 VCC" (at 145.0 154.5 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 5420810e-29e4-4572-a6fc-49544784185e)
+  )
+  (text "pines 1, 2, 5 sin conexión (NC)" (at 145.0 157.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid ddbe2a6f-81bb-4722-8edd-28fd9dff9e3b)
+  )
+  (text "R1, R2: pull-up 4.7 k del bus I2C" (at 125.0 100.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid a3340c79-c37f-474c-8c64-be76ae4a97fe)
+  )
+  (text "3. BOTONES: pull-up 10 k + antirrebote 100 nF" (at 90.0 185.0 0)
+    (effects (font (size 2.2 2.2) bold) (justify left))
+    (uuid 669d736e-3865-4814-a368-acfbac0dc3a7)
+  )
+  (text "SW2: pulsador CALIBRAR" (at 173.1 208.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid deb58db0-b293-455f-9a70-562c162dda0c)
+  )
+  (text "(al pulsar: GPIO = GND)" (at 173.1 210.5 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid a3960b63-4526-4b90-b85c-ad79c0a26b46)
+  )
+  (text "R3: pull-up 10 k a 3V3" (at 106.3 213.5 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 91f49ba6-ff57-4fc4-b2e4-7a23db6d84dd)
+  )
+  (text "C1: antirrebote 100 nF" (at 133.7 219.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 9ec8117c-2562-4b30-838a-c56a146d5c98)
+  )
+  (text "SW3: pulsador MEDIR" (at 173.1 239.76 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid dc5d96a7-f184-4ac1-a146-e4664d0ca84e)
+  )
+  (text "(al pulsar: GPIO = GND)" (at 173.1 242.26 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid a890e551-f860-4f3f-be6f-98e38b6a51d4)
+  )
+  (text "R4: pull-up 10 k a 3V3" (at 106.3 245.26 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid d20c91ce-9f03-4c1e-b5ba-3cdd77bde7fa)
+  )
+  (text "C2: antirrebote 100 nF" (at 133.7 250.76 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 576f3149-cee2-4668-8b23-85ff23a03ee9)
+  )
+  (text "4. DESACOPLE de alimentación" (at 208.0 185.0 0)
+    (effects (font (size 2.2 2.2) bold) (justify left))
+    (uuid bc80b29e-2dd5-44d2-9f10-1ee76f7256a1)
+  )
+  (text "C3, C4: electrolíticos 100 uF (reserva de energía 3V3 / 5V)"
+    (at 208.0 233.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid eb5b76f4-893f-46cb-ae12-ab03d6afb5db)
+  )
+  (text "C5, C6, C7: 100 nF cerámicos, uno por módulo (J3, J4, J5)"
+    (at 208.0 236.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid f65a48f7-39c0-46c7-9302-540874a82eb6)
+  )
+  (text "LEYENDA DE REDES" (at 215.0 30.0 0)
+    (effects (font (size 1.8 1.8) bold) (justify left))
+    (uuid 7d3412f7-df78-4635-a2c1-612569b5569d)
+  )
+  (text "VCC_5V : salida 5 V del módulo TP4056 + Boost" (at 215.0 36.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid e151a8b3-4da7-41a4-9897-c1a1ce524023)
+  )
+  (text "VCC_3V3 : 3.3 V regulados del ESP32" (at 215.0 40.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 8947a973-cd38-488d-98f1-7a9f0c114736)
+  )
+  (text "BAT_RAW / VBAT_SW : batería antes / después del interruptor"
+    (at 215.0 44.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 9b433a2d-afd2-4311-9e1b-8781e0d8de8b)
+  )
+  (text "SDA, SCL : bus I2C (OLED + TCS34725)" (at 215.0 48.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 55dca459-384b-4dce-91b4-dc4d6e5b69b5)
+  )
+  (text "GPIO_CAL, GPIO_MED : entradas de los botones (activas en bajo)"
+    (at 215.0 52.0 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid b869ff32-854e-4745-8f1d-3e693896b862)
+  )
+
+  (label "BAT_RAW" (at 85.0 50.8 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid edc85946-06d2-4232-bcd5-380cb25e3d51)
+  )
+  (label "VBAT_SW" (at 135.0 48.26 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid 4ceefc05-8779-4d36-9c91-27f1a72a4a02)
+  )
+  (label "SDA" (at 86.0 152.4 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid aa6d2690-7ca5-433c-97f4-618c5b5bf755)
+  )
+  (label "SCL" (at 101.6 154.94 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid 89c7f22b-9867-4b72-bb76-a2219ddaeafa)
+  )
+  (label "GPIO_CAL" (at 91.82 207.0 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid 913f79ee-28c3-442f-9a00-689fa00e05cd)
+  )
+  (label "GPIO_MED" (at 84.2 238.76 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid 43f1740f-ff99-4f2d-ae21-205efc633d54)
+  )
+
+  (symbol (lib_id "Connector_Generic:Conn_01x02") (at 63.5 50.8 0) (mirror y) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 32e9adb1-3abf-4bb7-a4db-8059d4f483e0)
+    (property "Reference" "J1" (at 63.5 44.0 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "Batería Li-Po" (at 63.5 46.5 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 63.5 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "J1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Switch:SW_SPDT_COM1") (at 111.76 50.8 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 5978ad53-12ee-4a8d-a039-e6a5e8e2f0e1)
+    (property "Reference" "SW1" (at 111.76 42.0 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "Interruptor encendido" (at 111.76 44.5 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Button_Switch_THT:SW_Slide-03_Wuerth-WS-SLTV_10x2.5x6.4_P2.54mm" (at 111.76 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "SW1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector_Generic:Conn_01x04") (at 165.1 50.8 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid a131add7-c4eb-49d1-aaec-2c78a58f332b)
+    (property "Reference" "J2" (at 172.0 44.0 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "Carga+Regulador TP4056+Boost5V" (at 172.0 46.5 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (at 165.1 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "J2") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 73.66 53.34 90) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid f116b004-d56f-476a-87da-f291106019e7)
+    (property "Reference" "#PWR01" (at 73.66 47.34 270)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 77.56 53.34 270)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR01") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 154.94 50.8 270) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid daa75cd2-d0c9-41bc-a3a9-9006d14cbfca)
+    (property "Reference" "#PWR02" (at 154.94 44.8 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 151.04 50.8 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR02") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VCC_5V") (at 154.94 53.34 90) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 6f2c8997-6d68-4339-8340-ef994373b209)
+    (property "Reference" "#PWR03" (at 154.94 47.34 270)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC_5V" (at 151.04 53.34 270)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR03") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 154.94 55.88 270) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid a5b5bf24-c026-4925-a0d5-01f9fb3123aa)
+    (property "Reference" "#PWR04" (at 154.94 49.88 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 151.04 55.88 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR04") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector_Generic:Conn_01x07") (at 63.5 152.4 0) (mirror y) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 6d2ab82b-faf1-4e9d-b841-ec7d01727907)
+    (property "Reference" "J3" (at 63.5 138.5 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "ESP32 (dev board)" (at 63.5 136.0 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" (at 63.5 152.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "J3") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector_Generic:Conn_01x04") (at 137.16 114.3 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 2e6d0807-3134-4503-9ff9-69a1663b615d)
+    (property "Reference" "J4" (at 141.5 111.76 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "OLED SSD1306 I2C" (at 141.5 114.3 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (at 137.16 114.3 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "J4") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector_Generic:Conn_01x07") (at 137.16 142.24 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 50502ae6-97af-4e86-b852-0065b9eeeb22)
+    (property "Reference" "J5" (at 141.5 137.2 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "TCS34725 HW-393 I2C" (at 141.5 139.7 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" (at 137.16 142.24 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "J5") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 96.52 107.95 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid b1c04159-19f5-4d61-b954-6afef04e5a7c)
+    (property "Reference" "R1" (at 94.4 106.7 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "4.7k" (at 94.4 109.3 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 96.52 107.95 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "R1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 109.22 107.95 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 567edac6-f482-4798-9b23-5aadc6df04dc)
+    (property "Reference" "R2" (at 111.4 106.7 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "4.7k" (at 111.4 109.3 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 109.22 107.95 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "R2") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VCC_5V") (at 73.66 144.78 270) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 5419fa36-166d-497c-8a4d-8908c66c6be1)
+    (property "Reference" "#PWR05" (at 73.66 138.78 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC_5V" (at 77.56 144.78 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR05") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 73.66 147.32 90) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 6451d9ce-1ecc-4c49-a0e1-e77e0190b58e)
+    (property "Reference" "#PWR06" (at 73.66 141.32 270)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 77.56 147.32 270)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR06") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VCC_3V3") (at 73.66 149.86 270) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 0a20b4fd-b18e-49f0-b88a-76fa440020f8)
+    (property "Reference" "#PWR07" (at 73.66 143.86 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC_3V3" (at 77.56 149.86 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR07") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VCC_3V3") (at 96.52 104.14 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 38f14272-efbd-4542-a4bd-81c5d5ddf5d6)
+    (property "Reference" "#PWR08" (at 96.52 98.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC_3V3" (at 96.52 100.54 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR08") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VCC_3V3") (at 109.22 104.14 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid b9b1a4bf-cd7c-4e8e-9263-f67affa586f8)
+    (property "Reference" "#PWR09" (at 109.22 98.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC_3V3" (at 109.22 100.54 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR09") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VCC_3V3") (at 127.0 111.76 90) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid c7b188cc-67fc-4213-9a38-c2de7de5959a)
+    (property "Reference" "#PWR10" (at 127.0 105.76 270)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC_3V3" (at 123.1 111.76 270)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR10") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 127.0 114.3 270) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 4e2b3a8e-c013-4a34-881b-22f7be1eade1)
+    (property "Reference" "#PWR11" (at 127.0 108.3 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 123.1 114.3 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR11") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 127.0 147.32 270) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 5ff2cf6c-baa5-465f-a706-20423d8d8582)
+    (property "Reference" "#PWR12" (at 127.0 141.32 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 123.1 147.32 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR12") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VCC_3V3") (at 127.0 149.86 90) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 1a96aac9-22a5-4e00-9a68-53394a7aa66f)
+    (property "Reference" "#PWR13" (at 127.0 143.86 270)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC_3V3" (at 123.1 149.86 270)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR13") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 114.3 203.19 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 81943b89-8947-4464-8c82-69d41ad81e50)
+    (property "Reference" "R3" (at 112.1 201.9 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "10k" (at 112.1 204.4 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 114.3 203.19 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "R3") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C") (at 139.7 210.81 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid b06f8377-cd5e-4fb4-a610-e2bd88ff3361)
+    (property "Reference" "C1" (at 141.9 209.5 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "100nF" (at 141.9 212.1 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" (at 139.7 210.81 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "C1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Switch:SW_Push") (at 165.1 207.0 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 353608be-9fbc-49ea-9795-1fd6c2ee6d08)
+    (property "Reference" "SW2" (at 165.1 201.5 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "CALIBRAR" (at 165.1 204.0 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Button_Switch_THT:SW_PUSH_6mm" (at 165.1 207.0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "SW2") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VCC_3V3") (at 114.3 199.38 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 1bdf003b-91c0-47ad-bbc7-a23cc7aa1eb1)
+    (property "Reference" "#PWR14" (at 114.3 193.38 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC_3V3" (at 114.3 195.78 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR14") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 139.7 214.62 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 99ab0e1e-8c2e-4713-b2ec-2d0240ae40f2)
+    (property "Reference" "#PWR15" (at 139.7 208.62 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 139.7 218.82 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR15") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 170.18 212.08 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid f79ae77a-00d8-45f0-8bea-cdc471e6fe84)
+    (property "Reference" "#PWR16" (at 170.18 206.08 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 170.18 216.28 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR16") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 114.3 234.95 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid e045dfa9-96ba-44d5-8ae6-c61d328339d8)
+    (property "Reference" "R4" (at 112.1 233.66 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "10k" (at 112.1 236.16 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 114.3 234.95 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "R4") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C") (at 139.7 242.57 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid ab4c6bda-c8a6-4322-a762-92cc38480890)
+    (property "Reference" "C2" (at 141.9 241.26 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "100nF" (at 141.9 243.86 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" (at 139.7 242.57 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "C2") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Switch:SW_Push") (at 165.1 238.76 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 658df714-0847-4920-ada8-f62c39fa8c34)
+    (property "Reference" "SW3" (at 165.1 233.26 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "MEDIR" (at 165.1 235.76 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Button_Switch_THT:SW_PUSH_6mm" (at 165.1 238.76 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "SW3") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VCC_3V3") (at 114.3 231.14 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 6c802b8f-afba-4485-a98a-6ea8857447ed)
+    (property "Reference" "#PWR17" (at 114.3 225.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC_3V3" (at 114.3 227.54 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR17") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 139.7 246.38 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid e5d56521-dfb9-4a91-bf35-540c88a6bac4)
+    (property "Reference" "#PWR18" (at 139.7 240.38 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 139.7 250.58 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR18") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 170.18 243.84 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 2a5a4e46-f304-4394-b01e-59205fe40cde)
+    (property "Reference" "#PWR19" (at 170.18 237.84 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 170.18 248.04 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR19") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C_Polarized") (at 228.6 210.82 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid f89dfcf4-4fb5-41ba-835e-5501392fe3b6)
+    (property "Reference" "C3" (at 226.1 209.32 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "100uF" (at 226.1 212.32 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" (at 228.6 210.82 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "C3") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VCC_3V3") (at 228.6 207.01 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 8bac32b7-f21b-44d6-aa98-6cd9386e1456)
+    (property "Reference" "#PWR20" (at 228.6 201.01 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC_3V3" (at 228.6 203.41 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR20") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 228.6 214.63 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 57a968b2-5085-4772-a28b-b2b8bcfb7e63)
+    (property "Reference" "#PWR21" (at 228.6 208.63 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 228.6 218.83 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR21") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:PWR_FLAG") (at 233.68 207.01 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 502f0571-fa9d-44e7-a7e8-1e6914e69658)
+    (property "Reference" "#FLG01" (at 233.68 203.01 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "PWR_FLAG" (at 233.68 204.51 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#FLG01") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:PWR_FLAG") (at 233.68 214.63 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 360c2ac6-c234-4aed-9a1c-de11a1b90f0d)
+    (property "Reference" "#FLG02" (at 233.68 210.63 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "PWR_FLAG" (at 233.68 212.13 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#FLG02") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C") (at 251.46 210.82 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 5742bcab-6ca4-48bd-8fbe-f735e2ecfe6f)
+    (property "Reference" "C5" (at 248.96 209.32 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "100nF" (at 248.96 212.32 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" (at 251.46 210.82 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "C5") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VCC_3V3") (at 251.46 207.01 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid fecb1382-7b88-423d-825a-97cff5799dfe)
+    (property "Reference" "#PWR22" (at 251.46 201.01 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC_3V3" (at 251.46 203.41 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR22") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 251.46 214.63 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 3d8b8a02-646a-4968-bdd9-16681a6481ed)
+    (property "Reference" "#PWR23" (at 251.46 208.63 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 251.46 218.83 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR23") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C") (at 274.32 210.82 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 5293d55d-da4d-498a-8909-5908f225e55c)
+    (property "Reference" "C6" (at 271.82 209.32 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "100nF" (at 271.82 212.32 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" (at 274.32 210.82 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "C6") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VCC_3V3") (at 274.32 207.01 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 2569e517-eb3b-45a9-9b85-5c9aa9f26433)
+    (property "Reference" "#PWR24" (at 274.32 201.01 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC_3V3" (at 274.32 203.41 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR24") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 274.32 214.63 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid e01a044d-a53e-4933-af9a-6b79fb57f48b)
+    (property "Reference" "#PWR25" (at 274.32 208.63 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 274.32 218.83 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR25") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C") (at 297.18 210.82 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid a5eee948-d5ba-44c5-8da2-fba2ffebab54)
+    (property "Reference" "C7" (at 294.68 209.32 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "100nF" (at 294.68 212.32 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" (at 297.18 210.82 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "C7") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VCC_3V3") (at 297.18 207.01 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 72923235-6184-4cb8-ade6-19868a68b745)
+    (property "Reference" "#PWR26" (at 297.18 201.01 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC_3V3" (at 297.18 203.41 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR26") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 297.18 214.63 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid d83db204-46b5-4763-bc86-cfc216fc770e)
+    (property "Reference" "#PWR27" (at 297.18 208.63 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 297.18 218.83 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR27") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C_Polarized") (at 320.04 210.82 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 80a6d8fd-83cf-4db4-9529-5a2285385c1d)
+    (property "Reference" "C4" (at 317.54 209.32 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "100uF" (at 317.54 212.32 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" (at 320.04 210.82 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "C4") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VCC_5V") (at 320.04 207.01 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 80b2fee6-2003-4301-8568-6ac1d46f2e19)
+    (property "Reference" "#PWR28" (at 320.04 201.01 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC_5V" (at 320.04 203.41 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR28") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 320.04 214.63 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 1828fbdc-418d-43e7-876f-e5018dc87031)
+    (property "Reference" "#PWR29" (at 320.04 208.63 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 320.04 218.83 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#PWR29") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:PWR_FLAG") (at 325.12 207.01 0) (unit 1)
+    (in_bom no) (on_board no)
+    (uuid 4ce36102-04d5-444b-a443-ee07c635f594)
+    (property "Reference" "#FLG03" (at 325.12 203.01 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "PWR_FLAG" (at 325.12 204.51 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "fotometro-portatil"
+        (path "/297f9a6d-cb8e-4501-bee1-ae40b1a1f4c3"
+          (reference "#FLG03") (unit 1)
+        )
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
 )

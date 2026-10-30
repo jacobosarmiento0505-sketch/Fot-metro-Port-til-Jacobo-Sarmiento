@@ -43,7 +43,25 @@
   las pistas principales (alimentación, I2C, botones).
 - Se generaron los archivos de fabricación: Gerbers, taladro, STEP, BOM y
   vistas en PDF/PNG del esquemático y la placa.
-- Pendiente para el estudiante: revisar el PCB en KiCad y terminar de
-  resolver manualmente, con el enrutador interactivo, los pocos cruces de
-  pistas que el DRC automático marca (ver nota en el README y en
-  `electronica/kicad/drc_report.txt`).
+
+## Retroalimentación del profesor y versión 2 (30 de octubre de 2026)
+
+- El profesor pidió cuatro cambios: textos en el esquemático, botones
+  cableados como en su ejemplo, ESP32 (J3) con todos sus pines conectados y una
+  placa mucho más compacta. Se rehízo el esquemático (hoja A3, con cables,
+  textos y cuadro de título) y la PCB (de ~175 x 220 mm a ~117 x 77 mm, todas las
+  conexiones ruteadas en B.Cu). Revisada en KiCad, el profesor la aprobó.
+- Cambio de footprint: el interruptor SW1 pasó a la huella Würth WS-SLTV con pitch
+  de 2,54 mm (la anterior tenía pads a 2 mm y no permitía los 0,8 mm de separación).
+- El profesor pidió subir el proyecto a GitHub para revisarlo; se creó el
+  repositorio público y se subieron los archivos.
+- Revisión contra el enunciado de la Parte II: el DRC marcaba 42 avisos de
+  separación (0,4–0,8 mm). Se volvió a rutear con margen estricto de 0,8 mm
+  (placa de ~121 x 80 mm): **0 violaciones**, 40/40 conexiones, 0 cortos.
+- Se agregaron: serigrafía (nombre, versión, equipo, leyenda de pines),
+  bibliotecas propias en `electronica/libraries/` (símbolos y footprints),
+  hojas de datos, imágenes de cara superior, cara inferior, vista 3D y DRC,
+  zip de Gerbers y taladro, e informe en PDF.
+- Equipo 2, sección 1: Jacobo Sarmiento, Sofía Kotoras y Jimena Otero.
+- Pendiente para la siguiente etapa: fabricación en la CNC, montaje, pruebas de
+  alimentación e I2C y firmware.

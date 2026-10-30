@@ -63,26 +63,21 @@ con `kicad-cli sch export netlist`) y la ubicación de todos los
 footprints respeta los espaciamientos mínimos.
 
 La placa se **rediseñó más compacta** a partir de la retroalimentación del
-profesor: pasó de ~175 x 220 mm (38.500 mm²) a **~117 x 77 mm
-(~9.000 mm²)**, es decir, ocupa menos de la cuarta parte del área anterior.
-La distribución se obtuvo con una búsqueda automática (recocido simulado
-sobre la ubicación y rotación de cada componente, evaluando el ruteo real
-con el router A* del proyecto).
+profesor: pasó de ~175 x 220 mm (38.500 mm²) a **~121 x 80 mm
+(~9.700 mm²)**, cerca de la cuarta parte del área anterior. La distribución
+se obtuvo con una búsqueda automática (recocido simulado sobre la ubicación y
+rotación de cada componente, evaluando el ruteo real con el router A* del
+proyecto) y el ruteo final se repitió con margen estricto de 0,8 mm.
 
 Resultado del enrutado (verificado sobre el archivo guardado):
 
-- **Las 40 conexiones están ruteadas** — 0 pines sin conectar (`unconnected_items` = 0).
-- **0 cortocircuitos**: se comprobó con colisión geométrica de formas (pista-pista y
-  pista-pad de redes distintas), no solo con el DRC.
-- El DRC con la regla de 0.8 mm marca **42 avisos de "clearance"**, todos entre pistas de
-  redes distintas con una separación real de **0.4 a 0.8 mm** (22 de ellos de 0.6 mm
-  o más). Son tramos donde, para poder rutear todo en una sola capa, el router tuvo que
-  usar un margen menor al ideal de 0.8 mm. No hay contacto de cobre. Si el profesor
-  exige 0.8 mm estrictos en esos puntos, se pueden ajustar a mano con el enrutador
-  interactivo de KiCad (tecla `X`) alejando esas pistas unas décimas de milímetro.
-- Los 23 avisos `lib_footprint_issues` y 1 `copper_sliver` restantes son advertencias
-  (no errores): los footprints se generaron desde la librería estándar de KiCad pero
-  sin tabla de librerías local.
+- **Las 40 conexiones están ruteadas** — 0 pines sin conectar.
+- **0 cortocircuitos** y **0 violaciones de separación**: el DRC con las reglas de
+  0,8 mm de ancho y 0,8 mm de separación no marca errores.
+- Todas las pistas están en **B.Cu** (0 en F.Cu), de 0,8 mm de ancho.
+- Queda **1 advertencia** `copper_sliver` (B.Cu), documentada en el informe.
+- Serigrafía con nombre del proyecto, versión (v2.0), equipo, integrantes,
+  leyenda de pines de J1–J5 y pin 1 como pad cuadrado.
 
 Cambio de huella: el interruptor SW1 pasó a `SW_Slide-03_Wuerth-WS-SLTV_10x2.5x6.4_P2.54mm`
 (pines a 2.54 mm; el CK OS102011MS2Q anterior tenía pads a solo 2 mm entre sí, lo
@@ -93,11 +88,18 @@ es el contacto común (centro de la huella) y el pin 2 la salida.
 
 En `electronica/outputs/` se incluyen:
 
-- `gerbers/` — Gerbers (todas las capas) + archivo de taladro (`.drl`)
+- `gerbers/` — Gerbers de las capas usadas + archivo de taladro (`.drl`)
+- `fotometro_gerbers_y_taladro.zip` — Gerbers y taladro comprimidos
 - `fotometro.step` — modelo 3D de la placa
-- `fotometro_pcb.pdf` / `.svg` / `.png` — vista de la placa
-- `fotometro_sch.pdf` / `.png` — esquemático en PDF
+- `fotometro_pcb.pdf` / `.svg` — vistas de la placa en vectorial
+- `fotometro_pcb_cara_superior.png`, `fotometro_pcb_cara_inferior.png`,
+  `fotometro_vista3d.png`, `fotometro_drc.png` — imágenes de las vistas y del DRC
+- `fotometro_sch.pdf` / `fotometro_sch-1.png` — esquemático
 - `BOM_fotometro.csv` — lista de materiales
+
+Las bibliotecas propias están en `electronica/libraries/` y las hojas de datos
+en `docs/datasheets/`. Los scripts que generan el esquemático y la PCB están en
+`electronica/kicad/scripts/`.
 
 ## Autoría y uso de IA
 

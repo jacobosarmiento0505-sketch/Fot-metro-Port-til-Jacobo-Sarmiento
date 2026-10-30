@@ -65,10 +65,10 @@ sch.uuid = new_uuid()
 sch.paper = PageSettings(paperSize="A3")
 sch.titleBlock = TitleBlock(
     title="Fotómetro portátil para análisis de muestras",
-    date="2026-10-23", revision="2.0",
+    date="2026-10-30", revision="2.0",
     company="Universidad del Desarrollo (UDD) - Ingeniería Civil Biomédica",
     comments={1: "Electrónica para Ingeniería Biomédica - Parte II",
-              2: "Autor: Jacobo Sarmiento Espinosa",
+              2: "Equipo 2: J. Sarmiento, S. Kotoras, J. Otero (Secc. 1)",
               3: "Placa de integración: ESP32 + OLED + TCS34725 + TP4056/Boost"})
 root_path = f"/{sch.uuid}"
 placed_lib_ids = set()

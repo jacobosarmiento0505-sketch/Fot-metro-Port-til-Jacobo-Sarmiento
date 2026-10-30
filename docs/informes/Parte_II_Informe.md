@@ -1,10 +1,15 @@
 # Informe Parte II — Fotómetro portátil para análisis de muestras
 
-**Curso:** Electrónica para Ingeniería Biomédica (UDD)
-**Estudiante:** Jacobo Sarmiento Espinosa
-**Proyecto:** Fotómetro portátil para análisis de muestras
-
 ## 1. Identificación del proyecto
+
+| Campo | Detalle |
+|---|---|
+| **Proyecto** | Fotómetro portátil para análisis de muestras |
+| **Curso y sección** | Electrónica para Ingeniería Biomédica (UDD), sección 1 |
+| **Grupo / equipo** | Equipo 2 |
+| **Integrantes** | Jacobo Sarmiento Espinosa (j.sarmientoe@udd.cl) · Sofía Kotoras (s.kotorasl@udd.cl) · Jimena Otero (j.oteroj@udd.cl) |
+| **Fecha de entrega** | 30 de octubre de 2026 |
+| **Repositorio** | <https://github.com/jacobosarmiento0505-sketch/Fot-metro-Port-til-Jacobo-Sarmiento> |
 
 Fotómetro portátil de bajo costo, basado en un sensor de color digital I2C
 (TCS34725) y un microcontrolador ESP32, con lectura de resultados en
@@ -65,16 +70,20 @@ La lista de materiales completa está en
 [`electronica/outputs/BOM_fotometro.csv`](../../electronica/outputs/BOM_fotometro.csv).
 Resumen de interfaces:
 
-| Módulo | Conector | Señales |
-|---|---|---|
-| Batería Li-Po | J1 | BAT_RAW, GND |
-| Interruptor de encendido | SW1 | BAT_RAW → VBAT_SW |
-| Cargador/boost TP4056 | J2 | VBAT_SW, GND, VCC_5V |
-| ESP32 (dev board) | J3 | VCC_5V, GND, VCC_3V3, SDA, SCL, GPIO_CAL, GPIO_MED |
-| OLED SSD1306 I2C | J4 | VCC_3V3, GND, SDA, SCL |
-| Sensor de color TCS34725 (HW-393) | J5 | VCC_3V3, GND, SDA, SCL |
-| Botón CALIBRAR | SW2 | GPIO_CAL (pull-up 10k, antirrebote 100nF) |
-| Botón MEDIR | SW3 | GPIO_MED (pull-up 10k, antirrebote 100nF) |
+**Tabla 1.** Componentes, módulos e interfaces (corrientes estimadas a partir de las hojas de datos; ver `docs/datasheets/README.md`).
+
+| Componente o módulo | Función | Alimentación / corriente estimada | Interfaz y señales | Conexión, origen y destino |
+|---|---|---|---|---|
+| Batería Li-Po (J1) | Fuente de energía | 3,7 V nominal | BAT_RAW, GND | Hacia SW1 y TP4056 |
+| Interruptor SPDT (SW1) | Encendido general | Corriente total del equipo (< 1 A) | BAT_RAW → VBAT_SW | Entre J1 y J2 |
+| Módulo TP4056 + boost 5 V (J2) | Carga de la batería y riel de 5 V | Entrada 3,7 V; salida 5 V, hasta ~1 A | VBAT_SW, GND, VCC_5V | Origen: SW1; destino: ESP32 (J3) |
+| ESP32 dev board (J3) | Microcontrolador y regulador a 3,3 V | 5 V; ~80–240 mA | VCC_5V, GND, VCC_3V3, SDA, SCL, GPIO_CAL, GPIO_MED | Maestro I2C; entradas de los botones |
+| OLED SSD1306 128x64 (J4) | Mostrar resultados | 3,3 V; ~20 mA | I²C: SDA y SCL | SDA/SCL hacia el ESP32 |
+| Sensor de color TCS34725, módulo HW-393 (J5) | Medición de color/absorbancia | 3,3 V; ~0,3 mA + LED del módulo (~20 mA) | I²C: SDA y SCL (3 = SDA, 4 = SCL) | SDA/SCL hacia el ESP32 |
+| Pulsador CALIBRAR (SW2) | Calibración con blanco | 3,3 V (pull-up 10 kΩ) | GPIO_CAL, antirrebote 100 nF | Hacia el ESP32 |
+| Pulsador MEDIR (SW3) | Disparar la medición | 3,3 V (pull-up 10 kΩ) | GPIO_MED, antirrebote 100 nF | Hacia el ESP32 |
+| R1, R2 (4,7 kΩ) | Pull-up del bus I2C | 3,3 V | SDA, SCL | Entre el riel de 3,3 V y el bus |
+| C3, C4 (100 µF) y C5–C7 (100 nF) | Desacople de los rieles | — | VCC_3V3, VCC_5V | Junto a cada módulo |
 
 ## 4. Esquemático comentado
 
@@ -113,52 +122,76 @@ conectan los pines correctos, y que los pines no usados de los módulos
 (p. ej. LED/INT del sensor, posición C del interruptor) quedan marcados
 explícitamente como no conectados.
 
+![Esquemático del fotómetro (hoja A3)](../../electronica/outputs/fotometro_sch-1.png)
+
 ## 5. Librerías, footprints y modelos 3D
 
-Se usaron exclusivamente librerías estándar incluidas con KiCad 7
-(`kicad-symbols` / `kicad-footprints`), sin librerías de terceros:
+Todas las bibliotecas necesarias están **dentro del repositorio**
+(`electronica/libraries/`) y se enlazan con rutas relativas (`${KIPRJMOD}`)
+desde `electronica/kicad/sym-lib-table` y `fp-lib-table`, de modo que el
+proyecto abre igual en otro computador.
 
-- Símbolos: `Device:R`, `Device:C`, `Connector_Generic:Conn_01x02/04/07`,
-  `Switch:SW_SPDT`, `Switch:SW_Push`.
-- Footprints: `Connector_PinHeader_2.54mm`, `Resistor_THT`,
-  `Capacitor_THT`, `Button_Switch_THT`, `MountingHole`.
+1. **Símbolos** (`fotometro_custom.kicad_sym`): `SW_SPDT_COM1` (derivado de
+   `Switch:SW_SPDT`, con los pines 1 y 2 intercambiados para que el pin 1 sea el
+   común, igual que el pad 1 de la huella Würth), `VCC_3V3` y `VCC_5V`
+   (derivados de `power:VCC`, para tener rieles separados). El resto de los
+   símbolos son estándar de KiCad: `Device:R`, `Device:C`, `Device:C_Polarized`,
+   `Connector_Generic:Conn_01x02/04/07`, `Switch:SW_Push`, `power:GND`.
+2. **Footprints** (`*.pretty`): copias locales sin modificar de las huellas
+   oficiales de KiCad usadas (headers de 2,54 mm de 2, 4 y 7 pines, interruptor
+   `SW_Slide-03_Wuerth-WS-SLTV_10x2.5x6.4_P2.54mm`, pulsador `SW_PUSH_6mm`,
+   resistencia axial, capacitor de disco, capacitor electrolítico radial y
+   agujero de montaje `MountingHole_3.2mm_M3`).
+3. **Modelos 3D**: `electronica/outputs/fotometro.step` (placa y componentes con
+   modelo en las bibliotecas oficiales) y la vista 3D de la sección 6.
+4. **Fuentes**: bibliotecas oficiales de KiCad
+   (<https://gitlab.com/kicad/libraries/kicad-footprints>) y hojas de datos en
+   `docs/datasheets/README.md`.
 
-El archivo `electronica/kicad/fp-lib-table` fija las librerías de
-footprints usadas por el proyecto (apuntando a las librerías estándar de
-KiCad) para que el PCB abra sin advertencias de "librería no encontrada" en
-cualquier instalación estándar de KiCad 7.
-
-El modelo 3D de la placa se exportó a
-[`electronica/outputs/fotometro.step`](../../electronica/outputs/fotometro.step).
-Nota: como los conectores se modelan como headers genéricos (y no como los
-footprints específicos de cada módulo comercial), el STEP no incluye los
-modelos 3D de marca de cada módulo — solo la geometría de los headers de
-interfaz, la placa y los orificios de montaje.
+Verificación de los elementos personalizados: cantidad y numeración de pines
+(3 en `SW_SPDT_COM1`, igual que la huella), correspondencia símbolo-huella, pin 1
+(cuadrado en la serigrafía), separación de pines 2,54 mm, perforación de 1,0–1,1
+mm en las huellas THT y 3,2 mm en los agujeros de montaje. Como los módulos
+comerciales se integran por headers, no se rediseñan internamente.
 
 ## 6. Layout de PCB
 
-Archivo: `electronica/kicad/fotometro.kicad_pcb`
-(vista en [`electronica/outputs/fotometro_pcb-1.png`](../../electronica/outputs/fotometro_pcb-1.png)
-/ `.pdf` / `.svg`).
+Archivo: `electronica/kicad/fotometro.kicad_pcb`.
 
-- Placa de **una sola cara (B.Cu)**, pistas y espacio mínimo de **0.8 mm**.
-- **4 orificios de montaje M3 (3.2 mm)** cerca de las esquinas.
-- Todos los footprints ubicados respetando el espaciamiento mínimo
-  (verificado por DRC: 0 violaciones de distancia componente-a-componente,
-  borde de placa u orificios de montaje).
-- **Placa compacta (~117 x 77 mm)**: tras la retroalimentación del profesor se
-  redujo el área de ~38.500 mm² (175 x 220 mm) a ~9.000 mm². La distribución se
-  obtuvo con una búsqueda automática de ubicación/rotación evaluada con el
-  router A* del proyecto.
-- Las **40 conexiones quedan ruteadas** (0 `unconnected_items`) y se verificó
-  **0 cortocircuitos** mediante análisis geométrico de colisión de formas sobre
-  la placa guardada, además del DRC.
-- El DRC con la regla de 0.8 mm marca 42 avisos de "clearance" entre pistas de
-  redes distintas, con separaciones reales de 0.4 a 0.8 mm (sin contacto de
-  cobre); pueden mejorarse a mano con el enrutador interactivo de KiCad si se
-  exige 0.8 mm estrictos. Detalle en `electronica/kicad/drc_report.txt`.
-- El interruptor SW1 usa ahora la huella `SW_Slide-03_Wuerth-WS-SLTV_10x2.5x6.4_P2.54mm`
-  (pines a 2.54 mm) porque la anterior tenía pads a 2 mm entre sí.
+- Contorno cerrado en `Edge.Cuts`: **~121 x 80 mm**.
+- **4 agujeros de montaje de 3,2 mm** cerca de las esquinas.
+- Placa de **una sola cara**: las 277+ pistas están en **B.Cu** (0 en F.Cu),
+  todas de **0,8 mm** de ancho y con separación mínima de **0,8 mm**.
+- **Serigrafía** (F.SilkS): nombre del proyecto, versión de la placa (v2.0),
+  curso, equipo, integrantes, referencia de cada componente, nombre de cada
+  módulo, leyenda de pines de J1–J5 y pin 1 como pad cuadrado.
+- Las **40 conexiones del esquemático están ruteadas** (0 pines sin conectar) y
+  **0 cortocircuitos** (DRC y verificación geométrica de formas).
+
+![Cara superior (serigrafía)](../../electronica/outputs/fotometro_pcb_cara_superior.png)
+
+![Cara inferior B.Cu (todas las pistas)](../../electronica/outputs/fotometro_pcb_cara_inferior.png)
+
+![Vista 3D de la placa ensamblada (modelo simplificado a partir de las dimensiones de las huellas)](../../electronica/outputs/fotometro_vista3d.png)
+
+### 6.0 Verificación DRC
+
+Se ejecutó el DRC con las reglas del enunciado (0,8 mm de ancho y separación)
+sobre el archivo guardado: **0 errores y 0 violaciones de separación**. Queda
+una sola advertencia, `copper_sliver` (B.Cu), un trozo de cobre estrecho en
+la unión de pistas a 45° que no afecta la conectividad ni la fabricación en la
+CNC; se deja documentada como advertencia intencional. Detalle en
+`electronica/kicad/drc_report.txt`.
+
+![Resultado del DRC](../../electronica/outputs/fotometro_drc.png)
+
+La versión anterior de la placa (aprobada en revisión, 117 x 77 mm) tenía 42
+avisos de separación de 0,4 a 0,8 mm; se volvió a rutear con margen estricto de
+0,8 mm entre redes distintas a costa de agrandar la placa un 3 %.
+
+- El interruptor SW1 usa la huella `SW_Slide-03_Wuerth-WS-SLTV_10x2.5x6.4_P2.54mm`
+  (pines a 2,54 mm) porque la anterior tenía pads a 2 mm entre sí, lo que
+  impedía cumplir los 0,8 mm.
 
 ## 6.1 Retroalimentación del profesor y cambios realizados (versión 2)
 
@@ -170,7 +203,7 @@ aplicados y aprobados en la revisión posterior:
 | 1 | Faltaban textos en el esquemático para reconocer los componentes de la placa | Títulos de bloque, descripción junto a cada componente y a cada pin de los conectores, y cuadro de título (hoja A3) |
 | 2 | Los botones debían conectarse con cables, como en su ejemplo | SW2/SW3 cableados: pull-up de 10 kΩ a 3V3, unión en la línea del GPIO, pulsador a GND y capacitor de 100 nF a GND |
 | 3 | El ESP32 (J3) estaba suelto, solo con etiquetas, lo que podía alterar el funcionamiento al implementar la placa | Todos los pines de J3 conectados con cables: alimentación con símbolos de potencia, buses SDA/SCL hacia J4, J5 y los pull-ups, y GPIO hacia los botones |
-| 4 | La placa era muy grande y se perdía espacio | Placa rediseñada de ~175 x 220 mm a ~117 x 77 mm (menos de la cuarta parte del área), con las 40 conexiones ruteadas |
+| 4 | La placa era muy grande y se perdía espacio | Placa rediseñada de ~175 x 220 mm a ~121 x 80 mm (cerca de la cuarta parte del área), con las 40 conexiones ruteadas y DRC sin violaciones de separación |
 
 Verificación: el listado de conexiones (netlist) del esquemático coincide
 exactamente con el de la PCB (0 diferencias), la placa tiene 0
@@ -178,12 +211,15 @@ cortocircuitos y 0 conexiones sin ruta.
 
 ## 7. Archivos de fabricación
 
-Generados en `electronica/outputs/`:
+Generados desde la misma versión final de la placa en `electronica/outputs/`:
 
-- `gerbers/` — Gerbers de todas las capas + archivo de taladro (`.drl`)
-- `fotometro.step` — modelo 3D
-- `fotometro_pcb.pdf`, `.svg`, `.png` — vista de la placa
-- `fotometro_sch-1.png` — esquemático (el PDF está en `electronica/kicad/fotometro_sch.pdf`)
+- `gerbers/` — Gerbers de las capas usadas (F.Cu, B.Cu, máscaras, serigrafías,
+  Edge.Cuts) + archivo de taladro (`fotometro.drl`)
+- `fotometro_gerbers_y_taladro.zip` — Gerbers y perforaciones comprimidos
+- `fotometro.step` — modelo 3D (STEP)
+- `fotometro_pcb.pdf`, `.svg`, `fotometro_pcb_cara_superior.png`,
+  `fotometro_pcb_cara_inferior.png`, `fotometro_vista3d.png`, `fotometro_drc.png`
+- `fotometro_sch.pdf` y `fotometro_sch-1.png` — esquemático
 - `BOM_fotometro.csv` — lista de materiales
 
 ## 8. Repositorio
@@ -220,14 +256,34 @@ los profesores del curso.
 
 ## 10. Conclusiones
 
-El rediseño hacia un sensor de color digital I2C simplificó
-considerablemente el circuito (de un front-end analógico con amplificador
-operacional a un simple conector I2C), reduciendo el riesgo de errores de
-diseño analógico y el número de componentes a soldar, sin perder
-funcionalidad para el objetivo del equipo. El esquemático quedó
-completamente cableado y verificado a nivel de conectividad (el netlist
-coincide exactamente con el de la PCB), y la placa, reducida a menos de la
-cuarta parte de su área inicial, tiene sus 40 conexiones ruteadas en una sola
-capa sin cortocircuitos. Queda como mejora opcional alejar a mano unas
-décimas de milímetro los pocos tramos de pista que el DRC marca con
-separación entre 0.4 y 0.8 mm.
+**Decisiones de diseño.** El cambio a un sensor de color digital I2C
+(TCS34725) simplificó el circuito, eliminó el front-end analógico y redujo el
+riesgo de errores de diseño. La PCB es de integración: cada módulo comercial
+se monta por headers de 2,54 mm. Se eligió un interruptor con pitch de 2,54 mm
+para poder cumplir los 0,8 mm de separación.
+
+**Componentes y módulos finales.** ESP32 (dev board), OLED SSD1306 I2C,
+TCS34725 (HW-393), módulo TP4056 + boost 5 V, batería Li-Po, interruptor SPDT,
+dos pulsadores con pull-up de 10 kΩ y capacitor antirrebote de 100 nF, pull-ups
+I2C de 4,7 kΩ y capacitores de desacople (BOM completa en el repositorio).
+
+**Estado del esquemático y del layout.** Esquemático completo, cableado,
+con textos y pines no usados marcados como no conectados; su netlist coincide con
+el de la PCB. La placa mide ~121 x 80 mm, con 4 agujeros M3 de 3,2 mm y serigrafía
+de identificación.
+
+**Cumplimiento del ruteo por B.Cu.** 100 %: las 40 conexiones están en B.Cu,
+con pistas de 0,8 mm y separación de 0,8 mm, 0 puentes de alambre y 0 pistas en F.Cu.
+DRC: 0 errores y 1 advertencia documentada (`copper_sliver`).
+
+**Limitaciones y pendientes.** El modelo 3D mostrado es simplificado (cajas con
+la altura de cada componente); el STEP de KiCad solo incluye los modelos que
+existen en las bibliotecas. Los footprints genéricos de header no reproducen la
+forma exacta de cada módulo comercial, y el firmware aún es un esqueleto. Antes
+de fabricar conviene imprimir la huella a escala 1:1 y compararla con los módulos
+reales (Anexo 3).
+
+**Próxima etapa.** Fabricar la placa en la CNC del laboratorio, montar los
+módulos, probar alimentación e I2C, escribir el firmware (lectura del
+TCS34725, calibración con blanco, medición y despliegue en la OLED) y validar
+con muestras.

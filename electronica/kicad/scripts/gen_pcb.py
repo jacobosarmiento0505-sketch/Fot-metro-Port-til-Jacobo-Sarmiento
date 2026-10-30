@@ -118,9 +118,9 @@ def build_board(place, W, H):
     return board, fps
 
 
-FINAL_PLACE = {"J1": [72.31, 12.95, 270], "SW1": [87.0, 16.27, 90], "J2": [71.41, 18.48, 270], "J3": [52.82, 50.01, 0], "J4": [86.53, 33.91, 0], "J5": [90.27, 47.99, 90], "R1": [69.42, 36.66, 270], "R2": [77.81, 37.19, 270], "SW2": [84.1, 60.33, 0], "R3": [40.09, 46.71, 270], "C1": [78.97, 66.23, 90], "SW3": [17.81, 11.52, 0], "R4": [31.48, 50.5, 270], "C2": [11.07, 28.83, 0], "C3": [39.73, 36.39, 0], "C4": [44.35, 24.8, 0], "C5": [35.52, 26.91, 90], "C6": [28.16, 32.2, 180], "C7": [71.06, 27.75, 0]}
-FINAL_W, FINAL_H = 117.3, 77.3
-FINAL_ORDER = ['VBAT_SW', 'BAT_RAW', 'SDA', 'VCC_3V3', 'VCC_5V', 'GPIO_MED', 'GPIO_CAL', 'GND', 'SCL']
+FINAL_PLACE = {"J1": [74.48, 13.34, 270], "SW1": [89.61, 16.76, 90], "J2": [73.55, 19.03, 270], "J3": [54.4, 51.51, 0], "J4": [89.13, 34.93, 0], "J5": [92.98, 49.43, 90], "R1": [71.5, 37.76, 270], "R2": [80.14, 38.31, 270], "SW2": [86.62, 62.14, 0], "R3": [41.29, 48.11, 270], "C1": [81.34, 68.22, 90], "SW3": [18.34, 11.87, 0], "R4": [32.42, 52.02, 270], "C2": [11.4, 29.69, 0], "C3": [40.92, 37.48, 0], "C4": [45.68, 25.54, 0], "C5": [36.59, 27.72, 90], "C6": [29.0, 33.17, 180], "C7": [73.19, 28.58, 0]}
+FINAL_W, FINAL_H = 120.8, 79.6
+FINAL_ORDER = ['VCC_3V3', 'BAT_RAW', 'VBAT_SW', 'VCC_5V', 'GPIO_MED', 'SDA', 'GND', 'GPIO_CAL', 'SCL']
 PRIORITY = list(FINAL_ORDER)
 ALLOW_RELAXED = True
 
@@ -274,11 +274,80 @@ def prune_stubs(board, max_len_mm=0.6):
     return removed
 
 
+SHORT = {"GND": "G", "VCC_3V3": "3V3", "VCC_5V": "5V", "VBAT_SW": "VBAT", "BAT_RAW": "BAT+",
+         "GPIO_MED": "MED", "GPIO_CAL": "CAL", "SDA": "SDA", "SCL": "SCL"}
+NAMES = {"J1": "BATERIA", "SW1": "ON/OFF", "J2": "TP4056", "J3": "ESP32", "J4": "OLED", "J5": "TCS34725",
+         "SW2": "CALIBRAR", "SW3": "MEDIR"}
+TITLE = ["FOTOMETRO PORTATIL v2.0", "Electronica Ing. Biomedica - UDD", "Equipo 2 - Seccion 1",
+         "J.Sarmiento S.Kotoras J.Otero"]
+
+
+def _txt(board, s, x, y, size=1.0, layer=pcbnew.F_SilkS, rot=0):
+    t = pcbnew.PCB_TEXT(board)
+    t.SetText(s)
+    t.SetLayer(layer)
+    t.SetPosition(pcbnew.VECTOR2I(pcbnew.FromMM(x), pcbnew.FromMM(y)))
+    t.SetTextSize(pcbnew.VECTOR2I(pcbnew.FromMM(size), pcbnew.FromMM(size)))
+    t.SetTextThickness(pcbnew.FromMM(0.15))
+    t.SetHorizJustify(pcbnew.GR_TEXT_H_ALIGN_LEFT)
+    t.SetTextAngleDegrees(rot)
+    board.Add(t)
+    return t
+
+
+def add_silkscreen(board):
+    """Nombre, version y equipo + funcion de conectores en F.SilkS (sin pisar footprints)."""
+    f = 1e6
+    boxes = {fp.GetReference(): fp.GetBoundingBox(True, False) for fp in board.GetFootprints()}
+    taken = [(b.GetX() / f - 0.6, b.GetY() / f - 0.6, b.GetRight() / f + 0.6, b.GetBottom() / f + 0.6)
+             for b in boxes.values()]
+    bb = board.GetBoardEdgesBoundingBox()
+    W, H = bb.GetWidth() / f, bb.GetHeight() / f
+
+    def free(x0, y0, x1, y1):
+        if x0 < 1 or y0 < 1 or x1 > W - 1 or y1 > H - 1:
+            return False
+        return all(x1 < a or x0 > c or y1 < b or y0 > d for a, b, c, d in taken)
+
+    def place(s, size=1.0, rot=0, prefer=()):
+        w = len(s) * size * 1.0
+        h = size * 1.2
+        cand = list(prefer)
+        for y in range(2, int(H) - 2, 2):
+            for x in range(2, int(W) - 2, 2):
+                cand.append((x, y))
+        for x, y in cand:
+            x0, y0, x1, y1 = (x, y - h / 2, x + w, y + h / 2) if rot == 0 else (x - h / 2, y - w, x + h / 2, y)
+            if free(x0, y0, x1, y1):
+                taken.append((x0 - 0.3, y0 - 0.3, x1 + 0.3, y1 + 0.3))
+                _txt(board, s, x, y, size, rot=rot)
+                return True
+        print('sin espacio para', s)
+        return False
+
+    for i, s in enumerate(TITLE):
+        place(s, 1.2 if i == 0 else 1.0)
+    # leyenda de pines (pin 1 = cuadrado) para cada conector
+    legend = []
+    for ref in ("J1", "J2", "J3", "J4", "J5"):
+        nets = PARTS[ref][2]
+        legend.append(ref + " " + NAMES[ref] + ": " + " ".join(f"{k}={SHORT.get(v, v)}" for k, v in sorted(nets.items(), key=lambda kv: int(kv[0]))) + "  (pin1 cuadrado)")
+    for s in legend:
+        place(s, 0.8)
+    # nombre corto junto a cada modulo o pulsador
+    for ref, s in NAMES.items():
+        bx = boxes[ref]
+        x0, y0, x1, y1 = bx.GetX() / f, bx.GetY() / f, bx.GetRight() / f, bx.GetBottom() / f
+        pref = [(x0, y1 + 1.2), (x0, y0 - 1.2), (x1 + 1.0, (y0 + y1) / 2), (x0 - len(s) - 1.5, (y0 + y1) / 2)]
+        place(s, 0.8, prefer=pref)
+
+
 def run(place=None, W=175.0, H=220.0, order_seed=0, save=None, verbose=False):
     place = place or DEFAULT_PLACE
     board, fps = build_board(place, W, H)
     fails = route_board(board, fps, W, H, order_seed, verbose)
     print('tramos cortos eliminados:', prune_stubs(board))
+    add_silkscreen(board)
     shorts = check_shorts(board)
     unc = unconnected(board)
     if save:

@@ -34,7 +34,7 @@ CLEARANCE_MM = 0.8
 # board, not just relying on the DRC report). This is checked by `blocked()`
 # even when ignore_soft=True, so it is the one guarantee that can never be
 # relaxed.
-HARD_MARGIN_MM = 1.2  # centro-a-centro minimo en modo relajado (hueco >= 0.4 mm)
+HARD_MARGIN_MM = 1.6  # centro-a-centro minimo entre pistas de redes distintas (hueco = 0.8 mm, regla DRC)
 
 # SOFT_MARGIN_MM is the normal-routing halo, which additionally reserves
 # the DRC clearance rule's minimum gap (CLEARANCE_MM) beyond the hard

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name fotometro_custom)(type KiCad)(uri ${KIPRJMOD}/../libraries/fotometro_custom.kicad_sym)(options "")(descr "Simbolos propios: SW_SPDT_COM1, VCC_3V3, VCC_5V"))
+)
