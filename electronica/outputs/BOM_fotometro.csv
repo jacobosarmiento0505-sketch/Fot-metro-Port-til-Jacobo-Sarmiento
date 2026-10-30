@@ -1,0 +1,20 @@
+Referencia,Valor/Descripción corta,Footprint KiCad,Notas / función en el circuito,Cantidad
+J1,Conector 2 pines (batería Li-po),Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,Entrada de batería Li-Po (2S/1S según celda) -> BAT_RAW/GND,1
+SW1,Interruptor deslizante SPDT (encendido),Button_Switch_THT:SW_Slide-03_Wuerth-WS-SLTV_10x2.5x6.4_P2.54mm,Interruptor general de encendido del equipo,1
+J2,Conector 4 pines (módulo carga/regulador TP4056 + boost 5V),Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,Interfaz al módulo TP4056 (carga Li-po) + boost a 5V,1
+J3,Conector 7 pines (ESP32 dev board),Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical,"Interfaz a placa de desarrollo ESP32 (5V,GND,3V3,SDA,SCL,2x GPIO)",1
+J4,Conector 4 pines (display OLED SSD1306 I2C),Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,Interfaz a módulo OLED 128x64 I2C,1
+J5,Conector 7 pines (sensor de color TCS34725 / HW-393),Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical,Interfaz al módulo sensor de color I2C TCS34725 (breakout HW-393),1
+R1,Resistencia 4.7k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,Pull-up I2C SDA,1
+R2,Resistencia 4.7k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,Pull-up I2C SCL,1
+SW2,Pulsador táctil 6mm (CALIBRAR),Button_Switch_THT:SW_PUSH_6mm,Botón de calibración (blanco de referencia),1
+R3,Resistencia 10k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,Pull-up botón CALIBRAR,1
+C1,Capacitor cerámico 100nF,Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm,Antirrebote botón CALIBRAR,1
+SW3,Pulsador táctil 6mm (MEDIR),Button_Switch_THT:SW_PUSH_6mm,Botón de inicio de medición,1
+R4,Resistencia 10k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,Pull-up botón MEDIR,1
+C2,Capacitor cerámico 100nF,Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm,Antirrebote botón MEDIR,1
+C3,Capacitor electrolítico 100uF,Capacitor_THT:CP_Radial_D6.3mm_P2.50mm,"Desacople de bulto, riel 3V3",1
+C4,Capacitor electrolítico 100uF,Capacitor_THT:CP_Radial_D6.3mm_P2.50mm,"Desacople de bulto, riel 5V",1
+C5,Capacitor cerámico 100nF,Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm,Desacople local 3V3 (cerca ESP32),1
+C6,Capacitor cerámico 100nF,Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm,Desacople local 3V3 (cerca OLED),1
+C7,Capacitor cerámico 100nF,Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm,Desacople local 3V3 (cerca TCS34725),1
