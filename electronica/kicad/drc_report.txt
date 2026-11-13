@@ -1,5 +1,5 @@
-** Drc report for electronica/kicad/fotometro.kicad_pcb **
-** Created on 2026-10-30 11:48:46 **
+** Drc report for fotometro.kicad_pcb **
+** Created on 2026-11-13 11:06:41 **
 
 ** Found 1 DRC violations **
 [copper_sliver]: Copper sliver (B.Cu)

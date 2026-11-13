@@ -8,7 +8,7 @@ archivos `.kicad_sch` / `.kicad_pcb` de la carpeta de arriba.
 
 - `gen_schematic.py` — genera `fotometro.kicad_sch` a partir de la lista de
   componentes y la topología de conexiones del circuito.
-- `gen_pcb.py` — coloca los footprints (distribución compacta final, encontrada con una búsqueda automática) en la PCB y enruta las pistas; reproduce exactamente `fotometro.kicad_pcb`.
+- `gen_pcb.py` — coloca los footprints (distribución compacta final, encontrada con una búsqueda automática) en la PCB y enruta las pistas; genera la versión automática inicial de la placa (el archivo final `fotometro.kicad_pcb` se suavizó y ajustó a mano en KiCad); reproduce exactamente `fotometro.kicad_pcb`.
 - `router_astar.py` — router de pistas usado por `gen_pcb.py`: construye
   una grilla de ocupación del PCB y usa búsqueda A* para encontrar, para
   cada conexión, un camino que evite los demás componentes y las pistas ya

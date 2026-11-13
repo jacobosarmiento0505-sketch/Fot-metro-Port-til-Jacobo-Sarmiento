@@ -158,7 +158,7 @@ comerciales se integran por headers, no se rediseñan internamente.
 
 Archivo: `electronica/kicad/fotometro.kicad_pcb`.
 
-- Contorno cerrado en `Edge.Cuts`: **~121 x 80 mm**.
+- Contorno cerrado en `Edge.Cuts`: **~117 x 77 mm**.
 - **4 agujeros de montaje de 3,2 mm** cerca de las esquinas.
 - Placa de **una sola cara**: las 277+ pistas están en **B.Cu** (0 en F.Cu),
   todas de **0,8 mm** de ancho y con separación mínima de **0,8 mm**.
@@ -172,9 +172,7 @@ Archivo: `electronica/kicad/fotometro.kicad_pcb`.
 
 ![Cara inferior B.Cu (todas las pistas)](../../electronica/outputs/fotometro_pcb_cara_inferior.png)
 
-![Vista 3D de la placa ensamblada, desde arriba (visor 3D de KiCad)](../../electronica/outputs/fotometro_vista3d_superior.png)
-
-![Vista 3D de la placa ensamblada, en perspectiva (visor 3D de KiCad)](../../electronica/outputs/fotometro_vista3d_perspectiva.png)
+![Vista 3D de la placa (modelo simplificado generado con las dimensiones de las huellas: cara superior y cara inferior con pistas)](../../electronica/outputs/fotometro_vista3d.png)
 
 ### 6.0 Verificación DRC
 
@@ -187,9 +185,12 @@ CNC; se deja documentada como advertencia intencional. Detalle en
 
 ![Resultado del DRC](../../electronica/outputs/fotometro_drc.png)
 
-La versión anterior de la placa (aprobada en revisión, 117 x 77 mm) tenía 42
-avisos de separación de 0,4 a 0,8 mm; se volvió a rutear con margen estricto de
-0,8 mm entre redes distintas a costa de agrandar la placa un 3 %.
+La versión anterior de la placa (aprobada en revisión) tenía 42 avisos de
+separación de 0,4 a 0,8 mm, y la fresadora de la CNC necesita al menos 0,8 mm
+para no dejar puentes de cobre. El estudiante suavizó las pistas en KiCad
+(trazados rectos y a 45°) y se corrigieron los últimos tramos de GND y VCC_5V
+junto al ESP32; el DRC final del archivo guardado quedó sin violaciones de
+separación.
 
 - El interruptor SW1 usa la huella `SW_Slide-03_Wuerth-WS-SLTV_10x2.5x6.4_P2.54mm`
   (pines a 2,54 mm) porque la anterior tenía pads a 2 mm entre sí, lo que
@@ -205,7 +206,7 @@ aplicados y aprobados en la revisión posterior:
 | 1 | Faltaban textos en el esquemático para reconocer los componentes de la placa | Títulos de bloque, descripción junto a cada componente y a cada pin de los conectores, y cuadro de título (hoja A3) |
 | 2 | Los botones debían conectarse con cables, como en su ejemplo | SW2/SW3 cableados: pull-up de 10 kΩ a 3V3, unión en la línea del GPIO, pulsador a GND y capacitor de 100 nF a GND |
 | 3 | El ESP32 (J3) estaba suelto, solo con etiquetas, lo que podía alterar el funcionamiento al implementar la placa | Todos los pines de J3 conectados con cables: alimentación con símbolos de potencia, buses SDA/SCL hacia J4, J5 y los pull-ups, y GPIO hacia los botones |
-| 4 | La placa era muy grande y se perdía espacio | Placa rediseñada de ~175 x 220 mm a ~121 x 80 mm (cerca de la cuarta parte del área), con las 40 conexiones ruteadas y DRC sin violaciones de separación |
+| 4 | La placa era muy grande y se perdía espacio | Placa rediseñada de ~175 x 220 mm a ~117 x 77 mm (cerca de la cuarta parte del área), con las 40 conexiones ruteadas y DRC sin violaciones de separación |
 
 Verificación: el listado de conexiones (netlist) del esquemático coincide
 exactamente con el de la PCB (0 diferencias), la placa tiene 0
@@ -220,7 +221,7 @@ Generados desde la misma versión final de la placa en `electronica/outputs/`:
 - `fotometro_gerbers_y_taladro.zip` — Gerbers y perforaciones comprimidos
 - `fotometro.step` — modelo 3D (STEP)
 - `fotometro_pcb.pdf`, `.svg`, `fotometro_pcb_cara_superior.png`,
-  `fotometro_pcb_cara_inferior.png`, `fotometro_vista3d_superior.png`, `fotometro_vista3d_perspectiva.png`, `fotometro_drc.png`
+  `fotometro_pcb_cara_inferior.png`, `fotometro_vista3d.png`, `fotometro_drc.png`
 - `fotometro_sch.pdf` y `fotometro_sch-1.png` — esquemático
 - `BOM_fotometro.csv` — lista de materiales
 
@@ -271,7 +272,7 @@ I2C de 4,7 kΩ y capacitores de desacople (BOM completa en el repositorio).
 
 **Estado del esquemático y del layout.** Esquemático completo, cableado,
 con textos y pines no usados marcados como no conectados; su netlist coincide con
-el de la PCB. La placa mide ~121 x 80 mm, con 4 agujeros M3 de 3,2 mm y serigrafía
+el de la PCB. La placa mide ~117 x 77 mm, con 4 agujeros M3 de 3,2 mm y serigrafía
 de identificación.
 
 **Cumplimiento del ruteo por B.Cu.** 100 %: las 40 conexiones están en B.Cu,

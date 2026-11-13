@@ -56,8 +56,8 @@
 - El profesor pidió subir el proyecto a GitHub para revisarlo; se creó el
   repositorio público y se subieron los archivos.
 - Revisión contra el enunciado de la Parte II: el DRC marcaba 42 avisos de
-  separación (0,4–0,8 mm). Se volvió a rutear con margen estricto de 0,8 mm
-  (placa de ~121 x 80 mm): **0 violaciones**, 40/40 conexiones, 0 cortos.
+  separación (0,4–0,8 mm). Se suavizaron las pistas en KiCad y se corrigieron los tramos GND/VCC_5V cercanos al ESP32 para dejar 0,8 mm
+  (placa de ~117 x 77 mm, ruteo liso editado a mano en KiCad): **0 violaciones**, 40/40 conexiones, 0 cortos.
 - Se agregaron: serigrafía (nombre, versión, equipo, leyenda de pines),
   bibliotecas propias en `electronica/libraries/` (símbolos y footprints),
   hojas de datos, imágenes de cara superior, cara inferior, vista 3D y DRC,

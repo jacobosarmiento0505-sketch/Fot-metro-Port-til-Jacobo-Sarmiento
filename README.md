@@ -63,11 +63,13 @@ con `kicad-cli sch export netlist`) y la ubicación de todos los
 footprints respeta los espaciamientos mínimos.
 
 La placa se **rediseñó más compacta** a partir de la retroalimentación del
-profesor: pasó de ~175 x 220 mm (38.500 mm²) a **~121 x 80 mm
-(~9.700 mm²)**, cerca de la cuarta parte del área anterior. La distribución
+profesor: pasó de ~175 x 220 mm (38.500 mm²) a **~117 x 77 mm
+(~9.000 mm²)**, cerca de la cuarta parte del área anterior. La distribución
 se obtuvo con una búsqueda automática (recocido simulado sobre la ubicación y
 rotación de cada componente, evaluando el ruteo real con el router A* del
-proyecto) y el ruteo final se repitió con margen estricto de 0,8 mm.
+proyecto). Las pistas se generaron con ese router y luego el estudiante las
+**suavizó y ajustó a mano en KiCad** (pistas rectas y a 45°, sin zigzag); al final
+se corrigieron unos pocos tramos de GND y VCC_5V para cumplir los 0,8 mm.
 
 Resultado del enrutado (verificado sobre el archivo guardado):
 
@@ -93,7 +95,7 @@ En `electronica/outputs/` se incluyen:
 - `fotometro.step` — modelo 3D de la placa
 - `fotometro_pcb.pdf` / `.svg` — vistas de la placa en vectorial
 - `fotometro_pcb_cara_superior.png`, `fotometro_pcb_cara_inferior.png`,
-  `fotometro_vista3d_superior.png`, `fotometro_vista3d_perspectiva.png`, `fotometro_drc.png` — imágenes de las vistas y del DRC
+  `fotometro_vista3d.png`, `fotometro_drc.png` — imágenes de las vistas y del DRC
 - `fotometro_sch.pdf` / `fotometro_sch-1.png` — esquemático
 - `BOM_fotometro.csv` — lista de materiales
 
